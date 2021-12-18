@@ -1,0 +1,331 @@
+/*fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Playfair+Display&display=swap');
+@import url("https://use.typekit.net/vht7jde.css");
+
+h1 {
+    font-family:'Playfair Display'
+  
+}
+
+h2 {
+    font-family: 'Playfair Display';
+    font-weight: 100;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Playfair Display';
+    font-weight:100;
+    color: #8b745b;
+    font-size: x-large;
+}
+
+p {
+    font-family: futura-pt, sans-serif;
+    color: #2F3D47;
+}
+
+/*header*/
+
+.header-background {
+    background: #13181d;
+    color: white;
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 0%;
+}
+
+/*Hundefutter-Hintergrund*/
+
+.test {
+    width:100px;
+    height:100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: blue;}
+}
+/*
+#dogfood {
+    width: 77px;
+    height: 153px;
+    background: url(Bilder/hundefutter-einzeln-gold-unscharf.png) no-repeat;
+    animation-name: dogfoodanimation;
+    animation-duration: 1.6s;
+    background-size: contain;
+    position: fixed;
+    display: block;
+    z-index: -1;
+    animation-delay: 2s;
+    visibility: visible;
+}
+
+@keyframes dogfoodanimation {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 125%, 0);
+    }
+    to {
+        
+        opacity: 1;
+        transform: none;
+        
+    }
+}
+
+*/
+@keyframes fadeInUpHuge {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 125%, 0)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+.ikra {
+    position: fixed;
+    display: block;
+    z-index: -1;
+}
+
+.ikra1 {
+    width: 77px;
+    height: 153px;
+    background: url(Bilder/hundefutter-einzeln-gold-unscharf.png) no-repeat;
+    background-size: contain;
+    left: 0%;
+    top: 50%;
+    animation-name: fadeInUpHuge;
+    
+}
+
+.ikra2 {
+    width: 29px;
+    height: 30px;
+    background: url(Bilder/hundefutter-einzeln-gold-unscharf.png) no-repeat;
+    background-size: contain;
+    left: 10%;
+    top: 15%;
+}
+
+.ikra3 {
+    width: 66px;
+    height: 68px;
+    background: url(Bilder/hundefutter-einzeln-gold-unscharf.png) no-repeat;
+    background-size: contain;
+    left: 80%;
+    top: 30%;
+}
+
+.fadeInUpHuge {
+    animation-name: fadeInUpHuge;
+}
+/*Einführung*/
+#first-text {
+    text-align: center;
+    font: normal 17px 'Garamond', 'Times', 'Times New Roman';
+}
+
+/*Argumente*/
+
+.arguments {
+    background:  #8B745B;
+    font-family: 'PT-Sans';
+    padding: 2%;
+    margin: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.arguments p {
+    color: white;
+}
+
+.arguments:hover {
+    visibility: visible;
+    background: url(Bilder/lachs-fisch.png) 50% 100px no-repeat;
+    background-size: 300px auto;
+    min-height: 232px;
+    background-color: #02AEA8;
+    transition: 0.3s ease-in;
+
+}
+
+/*test*/
+
+.container-fluid {
+    padding: 2%;
+    margin: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.main_list {
+    width: 100%;
+    text-align: center;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.main_list li {
+    display: inline-block;
+    width: 100%;
+    background: url(Bilder/lachs-fisch.png) 50% 280px no-repeat;
+    background-size: 300px auto;
+    background-color: #8B745B;
+    min-height: 232px;
+    transition: .3s;
+}
+.main_list li:hover {
+    background: url(Bilder/lachs-fisch.png) 50% 100px no-repeat;
+    background-size: 300px auto;
+    background-color: #02AEA8;
+}
+
+ul li {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    list-style: none;
+    vertical-align: top;
+}
+.main_list li {
+    margin: 2%;
+}
+.main_list li a {
+    display: block;
+    width: 100%;
+    height: 232px;
+    font-family: futura-pt, sans-serif;;
+    line-height: 232px;
+    text-align: center;
+    color: #fff;
+    transition: .3s;
+    text-transform: uppercase;
+}
+
+.main_list li:hover a {
+    line-height: 120px;
+}
+/*Scrollsection*/
+#scrollheading {
+    text-align: center;
+}
+.scrollcontent{
+    text-align: center;
+}
+
+.scrollcontent p {
+    font-family: 'Playfair Display';
+    font-size: 45pt;
+    color: #D6D6D6;
+    font-weight: bold;
+}
+
+a {
+    margin: 0;
+padding: 0;
+}
+
+/*Kaufangebot*/
+
+.buy img{
+    width: 100%;
+    height: 50%; /*Abschneiden*/
+}
+
+.buy h3 {
+    text-align: center;
+}
+
+.buy p {
+    text-align: center;
+}
+
+
+/*Button jetzt bestellen*/
+a {
+    text-decoration: none;
+}
+
+.button-info {
+        display: inline-block;
+        padding: 0% 5% 0% 5%;
+        background-color: #02AEA8;
+        color: #fff;
+        text-align: center;
+        transition-property: background-color, color;
+        transition-duration: 0.5s, 0.5s;
+        transition-timing-function: ease, ease;
+        transition-delay: 0s, 0s;
+        font-family: futura-pt, sans-serif;
+        line-height: 300%;
+        text-transform: uppercase;
+        z-index: 3;
+        position: relative;
+        overflow: hidden;
+        left: 35%;
+}
+
+.button-info:hover {
+    color: #fff;
+}
+
+.button-info span {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    left: 50%;
+    top: 100%;
+    border-radius: 50%;
+    background: #B3A992;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    transition: width 0.5s, height 0.5s;
+    z-index: -1;
+}
+
+
+.button-info:hover span {
+    width: 300px;
+    height: 300px;
+}
+/*mobile styles*/
+
+
+/*small tablet*/
+@media screen and (min-width: 620px) {
+
+}
+
+/*large tablets & laptop*/
+@media screen and (min-width: 960px) {
+    
+}
+
+/*desktop styles*/
+@media screen and (min-width: 1200px) {
+    
+}
