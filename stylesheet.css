@@ -1,44 +1,279 @@
 /*fonts*/
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Playfair+Display&display=swap');
+
 @import url("https://use.typekit.net/vht7jde.css");
 
+/*reset*/
+body, p, a, ul, li {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*base styles*/
+
+body {
+    overflow-x: hidden;
+}
+
+
+
+/*fonts*/
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('Bilder/Fonts/Playfair_Display/Playfair_Display/static/PlayfairDisplay-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Playfair Display Regular';
+    src: url('Bilder/Fonts/Playfair_Display/Playfair_Display/static/PlayfairDisplay-Regular.ttf');
+}
 h1 {
-    font-family:'Playfair Display'
+    margin-top: 10%;
+}
+h1,h2 {
+    font-family:'Playfair Display';
+    text-align: center;
+    font-size: 2em;
   
 }
 
 h2 {
-    font-family: 'Playfair Display';
+    font-size: 1.5em;
     font-weight: 100;
-    text-align: center;
+    margin-top: 20%;
 }
 
 h3 {
     font-family: 'Playfair Display';
     font-weight:100;
     color: #8b745b;
-    font-size: x-large;
+    font-size: 1.5em;
 }
 
 p {
     font-family: futura-pt, sans-serif;
     color: #2F3D47;
+    font-size: 1.1em;
+    
+}
+
+/*buttons*/
+
+.btn-kaufen, .btn-kaufen-2 {
+    display: inline-block;
+    padding: 0% 4% 0% 4%;
+    background-color: #02AEA8;
+    color: #fff;
+    text-align: center;
+    transition-property: background-color, color;
+    transition-duration: 0.5s, 0.5s;
+    transition-timing-function: ease, ease;
+    transition-delay: 0s, 0s;
+    font-family: futura-pt, sans-serif;
+    line-height: 280%;
+    text-transform: uppercase;
+    z-index: 3;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-kaufen span, .btn-kaufen-2 span {
+position: absolute;
+display: block;
+width: 0;
+height: 0;
+left: 50%;
+top: 100%;
+border-radius: 50%;
+background: #017975;
+transform: translate(-50%, -50%);
+transition: width 0.5s, height 0.5s;
+z-index: -1;
+}
+
+
+.btn-kaufen:hover span, .btn-kaufen-2:hover span {
+width: 50em;
+height: 50em;
+}
+
+
+.btn-probierpaket {
+display: inline-block;
+padding: 0% 4% 0% 4%;
+border: 1px solid #B3A992;
+color: #B3A992;
+text-align: center;
+transition-property: background-color, color;
+transition-duration: 0.5s, 0.5s;
+transition-timing-function: ease, ease;
+transition-delay: 0s, 0s;
+font-family: futura-pt, sans-serif;
+line-height: 280%;
+text-transform: uppercase;
+position: relative;
+overflow: hidden;
+margin-bottom: 10px;
+}
+
+
+.btn-probierpaket:hover{
+color: #fff;
+}
+
+.btn-probierpaket span{
+position: absolute;
+display: block;
+width: 0;
+height: 0;
+left: 50%;
+top: 100%;
+background: #B3A992;
+border-radius: 50%;
+transform: translate(-50%, -50%);
+transition: width 0.5s, height 0.5s;
+z-index: -1;
+}
+
+.btn-probierpaket:hover span {
+width: 50em;
+height: 50em;
+}
+
+/*Button kaufen und probierpaket zentrieren*/
+
+.btn-zentrieren {
+    text-align: center;
+}
+
+/*Button Testimonial*/
+.btn-testimonial {
+    display: inline-block;
+    padding: 0% 4% 0% 4%;
+    background-color: #fff !important;
+    height: 18%;
+    color: #B3A992;
+    border: 1px solid #B3A992;
+    text-align: center;
+    transition-property: background-color, color;
+    transition-duration: 0.5s, 0.5s;
+    transition-timing-function: ease, ease;
+    transition-delay: 0s, 0s;
+    font-family: futura-pt, sans-serif;
+    line-height: 280%;
+    text-transform: uppercase;
+    z-index: 3;
+    position: relative;
+    overflow: hidden;
+    margin-top: 3.5%;
+    
+}
+
+.testimonials a:nth-child(2) {
+    position: relative;
+    left: 35%;
+    background: url(/RWD/Bilder/chevron-left-lightbrown.png) no-repeat;
+    background-size: contain;
+    background-position:center;
+}
+
+.testimonials a:nth-child(3) {
+    position: relative;
+    left: 45%;
+    background: url(/RWD/Bilder/chevron-right-lightbrown.png) no-repeat;
+    background-size: contain;
+    background-position:center;
+}
+
+.testimonials a:nth-child(2):hover {
+    background: url(/RWD/Bilder/chevron-left-white.png) no-repeat;
+    background-size: contain;
+    background-position:center;
+    background-color: #B3A992 !important;
+}
+
+.testimonials a:nth-child(3):hover {
+    background: url(/RWD/Bilder/chevron-right-white.png) no-repeat;
+    background-size: contain;
+    background-position:center;
+    background-color: #B3A992 !important;
+}
+
+
+
+/*mobile styles*/
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 }
 
 /*header*/
 
-.header-background {
-    background: #13181d;
-    color: white;
+header p {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    margin-bottom: 10%;
     text-align: center;
-    padding-top: 10%;
-    padding-bottom: 0%;
 }
 
-/*Hundefutter-Hintergrund*/
+.header-background {
+    grid-column: 1/13;
+    margin: 2%;
+    background: #13181d;
+    color: white;
+    padding-top: 10%;
+    position: relative;
+    padding-bottom: 20%;
+    
+}
 
+
+.header-background img {
+  width: 50%;
+  position: absolute;
+  justify-content: center;
+  transform: translate(50%);
+  top: 50%;
+}
+
+/*Linien
+.line {
+    border-left: 1px solid #B3A992;
+    height: 10%;
+    position: absolute;
+    left: 50%;
+    top: 28%;
+
+}
+
+.line2 {
+    display: inline;
+    border-left: 1px solid #B3A992;
+    height: 4%;
+    position: absolute;
+    left: 50%;
+    top: 62.5%;
+
+}
+
+
+.line3 {
+    display: inline;
+    border-left: 1px solid #B3A992;
+    height: 4%;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+
+}
+*/
+
+
+/*Hundefutter-Hintergrund
 .test {
     width:100px;
     height:100px;
@@ -51,7 +286,7 @@ p {
     from {background-color: red;}
     to {background-color: blue;}
 }
-/*
+
 #dogfood {
     width: 77px;
     height: 153px;
@@ -79,7 +314,7 @@ p {
     }
 }
 
-*/
+
 @keyframes fadeInUpHuge {
     from {
         opacity: 0;
@@ -130,104 +365,53 @@ p {
 .fadeInUpHuge {
     animation-name: fadeInUpHuge;
 }
+
+*/
+
 /*Einführung*/
 #first-text {
     text-align: center;
-    font: normal 17px 'Garamond', 'Times', 'Times New Roman';
+    font-family: 'Playfair Display Regular';
+    font-size: 0.9em;
+    font-weight:lighter;
+    margin-bottom: 14%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
+
+
 
 /*Argumente*/
-
-.arguments {
-    background:  #8B745B;
-    font-family: 'PT-Sans';
-    padding: 2%;
-    margin: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.arguments p {
-    color: white;
-}
-
-.arguments:hover {
-    visibility: visible;
-    background: url(Bilder/lachs-fisch.png) 50% 100px no-repeat;
-    background-size: 300px auto;
-    min-height: 232px;
-    background-color: #02AEA8;
-    transition: 0.3s ease-in;
-
-}
-
-/*test*/
-
-.container-fluid {
-    padding: 2%;
-    margin: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
-    text-align: center;
-    text-transform: uppercase;
-}
 
 .main_list {
     width: 100%;
     text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15%;
 }
 
-ul {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-}
 .main_list li {
-    display: inline-block;
-    width: 100%;
-    background: url(Bilder/lachs-fisch.png) 50% 280px no-repeat;
-    background-size: 300px auto;
+    background-size: 100%;
     background-color: #8B745B;
-    min-height: 232px;
-    transition: .3s;
-}
-.main_list li:hover {
-    background: url(Bilder/lachs-fisch.png) 50% 100px no-repeat;
-    background-size: 300px auto;
-    background-color: #02AEA8;
+    font-size: 0.9em;
+    grid-column: span 12;
+  
 }
 
-ul li {
-    margin: 0;
-    padding: 0;
-    font-size: 15px;
-    list-style: none;
-    vertical-align: top;
-}
 .main_list li {
     margin: 2%;
 }
 .main_list li a {
-    display: block;
-    width: 100%;
-    height: 232px;
     font-family: futura-pt, sans-serif;;
-    line-height: 232px;
+    line-height: 5em;
     text-align: center;
     color: #fff;
-    transition: .3s;
+    font-size: 1.2em;
     text-transform: uppercase;
 }
 
-.main_list li:hover a {
-    line-height: 120px;
-}
+
+
 /*Scrollsection*/
 #scrollheading {
     text-align: center;
@@ -236,7 +420,7 @@ ul li {
     text-align: center;
 }
 
-.scrollcontent p {
+.scrollcontent h3 {
     font-family: 'Playfair Display';
     font-size: 45pt;
     color: #D6D6D6;
@@ -248,84 +432,500 @@ a {
 padding: 0;
 }
 
+.fadescroll {
+    transition: all 400ms;
+    
+}
+
+.fade {
+    opacity: 1;
+}
+
+.moveleft {
+    transition: all 400ms;
+    
+}
+
+.left {
+    transform: translate(200px, 0);
+    opacity: 1;
+}
+
 /*Kaufangebot*/
+.buy {
+    text-align: center;
+}
 
+.buy div {
+    grid-column: 1/13;
+}
 .buy img{
-    width: 100%;
-    height: 50%; /*Abschneiden*/
-}
-
-.buy h3 {
-    text-align: center;
-}
-
-.buy p {
-    text-align: center;
-}
-
-
-/*Button jetzt bestellen*/
-a {
-    text-decoration: none;
-}
-
-.button-info {
-        display: inline-block;
-        padding: 0% 5% 0% 5%;
-        background-color: #02AEA8;
-        color: #fff;
-        text-align: center;
-        transition-property: background-color, color;
-        transition-duration: 0.5s, 0.5s;
-        transition-timing-function: ease, ease;
-        transition-delay: 0s, 0s;
-        font-family: futura-pt, sans-serif;
-        line-height: 300%;
-        text-transform: uppercase;
-        z-index: 3;
-        position: relative;
-        overflow: hidden;
-        left: 35%;
-}
-
-.button-info:hover {
-    color: #fff;
-}
-
-.button-info span {
-    position: absolute;
-    display: block;
-    width: 0;
-    height: 0;
-    left: 50%;
-    top: 100%;
-    border-radius: 50%;
-    background: #B3A992;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    transition: width 0.5s, height 0.5s;
-    z-index: -1;
-}
-
-
-.button-info:hover span {
-    width: 300px;
+    grid-column: 1/13;
+    width: 100% !important;
     height: 300px;
+    object-fit: cover;
+    object-position: center;
 }
-/*mobile styles*/
+
+.flex-container p {
+    margin: 5%;
+}
+
+.preis-alt {
+    text-decoration: line-through;
+    font-size: 0.9em;
+
+}
+
+.preis-aktuell {
+    font-weight: 900;
+    font-size: 1.5em;
+}
+
+.div-button {
+    text-align: center;
+   margin-top: 5%;
+}
+
+/*Grafik-kreis*/
+
+.gewicht {
+    margin-bottom: 10%;
+}
+
+.gewicht p {
+    color: #B3A992;
+    font-family: 'PlayfairDisplay-Regular';
+}
+
+.buy ul {
+    grid-column: 5/9;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    grid-auto-flow: column;
+}
+
+.buy li {
+    margin: 0px 20px;
+
+}
+
+
+.kreis-grafik-groß {
+    position: relative;
+    text-align: center;
+    border: 1px solid #B3A992;
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+}
+
+.kreis-grafik-groß div {
+    display: inline-block;
+    margin: 0 auto;
+    border: 1px solid #B3A992;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    margin: 3px;
+}
+
+.kreis-grafik-klein {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #B3A992;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+}
+
+.kreis-grafik-klein div {
+    display: inline-block;
+    margin: 0 auto;
+    border: 1px solid #B3A992;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    margin: 3px;
+}
+
+
+/*Fördert die Gesundheit*/
+
+.gesundheit {
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+}
+.gesundheit h3{
+ grid-column: 1/13;
+ text-align: center;
+}
+
+.gesundheit img {
+    grid-column: 1/13;
+    width: 80%;
+    margin: 0 auto;
+}
+/*Siegel*/
+
+.siegel img {
+    grid-column: 1/13;
+    width: 100%;
+}
+
+/*Testimonials*/
+
+.testimonials {
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+}
+
+.testimonials h3 {
+    grid-column: 1/13;
+    text-align: center;
+}
+
+.testimonials img {
+    grid-column: 3/11;
+    width: 100%;
+    z-index: 3;
+}
+.background {
+    margin-top: -12%;
+    padding-top: 18%;
+    padding-right: 8%;
+    padding-left: 8%;
+    padding-bottom: 3%;
+    grid-column: 1/13;
+    background-color: #8b745b;
+}
+
+.background div{
+    border-radius: 50px 50px 50px 0;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 8%;
+    padding-right: 8%;
+    background-color: #fff;
+    margin-bottom: 5%;
+}
+
+.autor {
+    margin-top: 5%;
+    font-weight: 700;
+}
+
+/*Footer*/ 
+
+footer {
+    background: url(/RWD/Bilder/footer-background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    padding: 10%;
+   
+}
+.footerstyle ul {
+    color: #B3A992;
+    text-transform: uppercase;
+    font-family: futura-pt, sans-serif;
+    font-size: 0.9em;  
+    text-align: center;
+    display: flex;
+    grid-column: 1/13;
+    margin: 30em auto 0em auto;
+
+  
+}
+
+.footerstyle ul li{
+    margin: 0 30px;
+}
 
 
 /*small tablet*/
 @media screen and (min-width: 620px) {
 
+     /*test*/
+     h1 {
+        color: blue;
+    }
+
+    /*button*/ 
+
+    .btn-probierpaket { 
+        margin-bottom: 0;
+    }
+
+
+
+    /*Header*/
+
+    .header-background img {
+        width: 40%;
+        left: 10%;
+        top: 60%;
+    }
+   
+
+    /*Argumente*/
+
+    .main_list {
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 10%;
+    }
+    
+    .main_list li:nth-child(1) {
+        grid-column: 1/5;
+    }
+    .main_list li:nth-child(2) {
+        grid-column: 5/9;
+    }
+    .main_list li:nth-child(3) {
+        grid-column: 9/13;
+    }
+    
+    .main_list li {
+        background: url(Bilder/lachs-fisch.png) 50% 250px no-repeat;
+        background-size: 100%;
+        background-color: #8B745B;
+        transition: .3s;
+        font-size: 0.75em;
+    }
+    
+    .main_list li:hover {
+        background: url(Bilder/lachs-fisch.png) 50% 100% no-repeat;
+        background-size: 100%;
+        background-color: #02AEA8;
+    }
+    
+    .main_list li {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .main_list li a {
+        display: grid;
+        font-family: futura-pt, sans-serif;;
+        line-height: 15em;
+        text-align: center;
+        color: #fff;
+        transition: .3s;
+        text-transform: uppercase;
+    }
+    
+    .main_list li:hover a {
+        line-height: 10em;
+    }
+
+
+    /*Grafik gesindheit*/
+
+    .gesundheit img {
+        grid-column: 1/13;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    /*Siegel*/
+    .siegel img {
+        grid-column: 1/13;
+        width: 80%;
+        margin: 0 auto;
+    }
+
 }
 
 /*large tablets & laptop*/
 @media screen and (min-width: 960px) {
+
+    h1 {
+        color: red;
+    }
+
+        /*Button testimonial */
+
+        .btn-testimonial {
+            height: 15%;
+            line-height: 280%;
+            
+        }
+        
+        .testimonials a:nth-child(2) {
+            position: relative;
+            left: 50%;
+            background: url(/RWD/Bilder/chevron-left-lightbrown.png) no-repeat;
+            background-size: contain;
+            background-position:center;
+        }
+        
+        .testimonials a:nth-child(3) {
+            position: relative;
+            left: 60%;
+            background: url(/RWD/Bilder/chevron-right-lightbrown.png) no-repeat;
+            background-size: contain;
+            background-position:center;
+        }
+
+
+    /*Argumente*/
+    .main_list {
+        width: 98%;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 10% auto;
+
+
+    }
     
+    .main_list li:nth-child(1) {
+        grid-column: 1/5;
+    }
+    .main_list li:nth-child(2) {
+        grid-column: 5/9;
+    }
+    .main_list li:nth-child(3) {
+        grid-column: 9/13;
+    }
+    
+    .main_list li {
+        background: url(Bilder/lachs-fisch.png) 50% 250px no-repeat;
+        background-size: 100%;
+        background-color: #8B745B;
+        transition: .3s;
+        font-size: 0.9em;
+    }
+    
+    .main_list li:hover {
+        background: url(Bilder/lachs-fisch.png) 50% 100% no-repeat;
+        background-size: 100%;
+        background-color: #02AEA8;
+    }
+    
+    .main_list li {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .main_list li a {
+        display: grid;
+        font-family: futura-pt, sans-serif;;
+        line-height: 15em;
+        text-align: center;
+        color: #fff;
+        transition: .3s;
+        text-transform: uppercase;
+    }
+    
+    .main_list li:hover a {
+        line-height: 10em;
+    }
+
+    /*Kaufangebot*/
+    .buy {
+        display: flex;
+    }
+
+
+    .buy img{
+        grid-column: 1/4;
+        width: 50% !important;
+        height: 500px;
+        object-fit: cover;
+        object-position: center;
+        display: flex;
+        float: left;
+        grid-row: 1;
+    }
+    .flex-container {
+        height: 500px;
+       padding-left: 5%;
+    }
+
+
+    .preis-alt {
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }    
+
+    .div-button {
+        padding-top: 5%;
+    }
+    
+ 
+  
+
+
+    /*Fördert die Gesundheit*/
+
+
+.gesundheit h3{
+ grid-column: 1/5;
+ text-align: center;
+ transform: translateY(30%);
+ width: 100%;
+
+}
+
+.gesundheit img {
+    grid-column: 5/13;
+    width: 80%;
+    margin: 0 auto;
+}
+
+    /*Testimonials*/
+
+.testimonials {
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+}
+
+.testimonials h3 {
+    grid-column: 1/4;
+    text-align: center;
+    transform: translateY(50%);
+}
+
+.testimonials img {
+    grid-column: 4/9;
+    width: 90%;
+    z-index: 3;
+    grid-row: 1;
+    transform: translateY(10%);
+}
+.background {
+    margin-top: -12%;
+    padding-top: 18%;
+    padding-right: 8%;
+    padding-left: 8%;
+    padding-bottom: 3%;
+    grid-column: 7/13;
+    grid-row: 1;
+    transform: translateY(16%);
+}
+
+.background div{
+   
+    margin-left: 30%;
+ 
+
+}
+
+
+
 }
 
 /*desktop styles*/
 @media screen and (min-width: 1200px) {
+
+    /*test*/ 
+    h1 {
+        color: pink; 
+    }
     
 }

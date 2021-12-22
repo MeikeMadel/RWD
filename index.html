@@ -3,26 +3,32 @@
 
 <head>
 <script type="text/javascript" src="script.js" defer></script>
+<script type="text/javascript" src="jquery.js" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Caspian Gold</title>
 <link rel="stylesheet" href="stylesheet.css">
+<link rel="stylesheet" href="https://use.typekit.net/bcv8pbi.css">
 </head>
 
 <body>
-<div>
+<div >
     <header>
-        <div class="header-background">
-            <p>Ausnahmslos hochwertig - Nur das Beste für deinen treuen Begleiter</p>
-            <h1>Nothing but luxury</h1>
-            <img src="Bilder/hundefutter-gold2.png" width="300px">
-        </div>
+        <section class="grid">
+            <div class="header-background">
+                <p>Ausnahmslos hochwertig - Nur das Beste für deinen treuen Begleiter</p>
+                <div class="line"></div>
+                <h1>Nothing but luxury</h1>
+                <img src="Bilder/hundefutter-gold2.png">
+            </div>
+        </section>
+
 
     </header>
         
     <main>
-        <div id="buttonZurück"></div>
-        <div id="buttonWeiter"></div>
+        <p id="demo"></p>
+        
         <div class="ikra ikra1 wow fadeInUpHuge"></div>
         <div class="ikra ikra2 wow fadeInUpHuge"></div>
         <div class="ikra ikra3 wow fadeInUpHuge"></div>
@@ -30,100 +36,119 @@
         <div id="dogfood"></div>
         
         <h2>Caspian Gold - Aus Lieber zu Ihrem Hund</h2>
-        <p id="first-text">Verwöhne deinen Vierbeiner mit unserem hochwertigen Caspian Gold Hundefutter mit Lachs und bereite IHm damit eine besondere Freude!</p>
-       <div>
-        <div class="arguments">
-            <p>hoher Fischanteil</p>
-        </div>
-        <div class="arguments">
-            <p>Gesundheit und Vitalität</p>
-        </div>
-        <div class="arguments">
-            <p>Ohne künstliche Zusätze</p>
-        </div>
-       </div>
+        <p id="first-text">Verwöhne deinen Vierbeiner mit unserem hochwertigen Caspian Gold Hundefutter mit Lachs und bereite ihm damit eine besondere Freude!</p>
 
-       <div class="container-fluid">
-           <ul class="main_list">
-               <li class="wow fadeInLeft" style="visibility: visible; animation-name: fadeIn;">
-                   <a href="index.html">Hoher Fischanteil</a>
-               </li>
-               <li class="wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+        <div class="line2"></div>
+        <ul class="main_list grid">
+            <li class="fadeInLeft">
+                <a href="index.html">Hoher Fischanteil</a>
+            </li>
+             <li class="fadeIn">
                 <a href="index.html">Gesundheit und Vitalität</a>
             </li>
-            <li class="wow fadeInRight" style="visibility: visible; animation-name: fadeIn;">
+            <li class="fadeInRight">
                 <a href="index.html">Ohne künstliche Zusätze</a>
             </li>
-           </ul>
-
-       </div>
-
-       //Scrollsektion
+        </ul>
+        <div class="line3"></div>
         <h3 id="scrollheading">Die besten Zutaten für das beste Hundefutter</h3>
        <div class="scrollcontent">
-        <p>Fangfrischer Lachs</p>
-        <img src="Bilder/lachs-fisch.png" width="300px">
-        <p>Süßkartoffel</p>
-        <img>
-        <p>Karotte</p>
-        <img>
-        <p>Lachsöl</p>
-        <img>
+           <section class="bereich"><h3 class="fadescroll">Fangfrischer Lachs</h3></section>
+           <section class="bereich"><img  src="Bilder/lachs-fisch.png" width="300px" class="fadescroll"></section>
+           <section class="bereich"><h3 class="moveleft">Süßkartoffel</h3></section>
+           <section class="bereich"><h3 class="fadescroll">Lachsöl</h3></section>
+           <section class="bereich"><h3 class="moveleft">Karotte</h3></section>
+       </div>
+       
+        <div class="buy grid">
+            <img src="Bilder/hundefutter-loeffel.jpg">
+            <div class="flex-container">
+                <h3>Caspian Gold mit Lachs</h3>
+            <p>Alleinfutter für russische Kampfhunde – für kleine bis mittelgroße [bis 10kg]</p>
+            <p>Ab dem 12. Lebensmonat</p></p>
+            <div class="preis">
+                <p class="preis-alt">€27,99</p>
+                <p class="preis-aktuell">€20,99</p>
+            </div>
+            
+            <ul class="gewicht">
+                <li class="kreis-grafik-klein">
+                    <div></div>
+                    <p>100g</p>
+                </li>
+                <li class="kreis-grafik-groß">
+                    <div></div>
+                    <p>300g</p>
+                </li>
+                
+            </ul>
+            <div class="div-button">
+                <a class="btn-kaufen" href="index.html">
+                    Jetzt bestellen
+                    <span></span>
+                </a>
+             </div>
+            </div>
+            
+         </div>
+         
+      
+           <div class="gesundheit grid">
+            <h3>Unser Futter fördert die Gesundheit Ihrer Fellnase</h3>
+            <img src="Bilder/gesundheit-bild-hund.png">
+           </div>
+
+       <div class="siegel grid">
+           <img src="Bilder/siegel.png">
        </div>
 
-       //Kaufangebot
-       <div class="buy">
-           <img src="Bilder/hundefutter-loeffel.jpg">
-           <h3>Caspian Gold mit Lachs</h3>
-           <p>Alleinfutter für russische Kampfhunde – <br>für kleine bis mittelgroße [bis 10kg] <br>Ab dem 12. Lebensmonat</p>
-           <p>€27,99</p>
-           <p>€20,99</p>
-           <img>
-           <p>100g</p>
+       <div class="testimonials grid">
+        <h3>Wieso Hundehalter Caspian Gold lieben</h3>
+        <img src="Bilder/cavalier-spaniel.jpg">
+        <div class="background">
+            <div>
+                <p>
+                    Meine Chanel ist sehr wählerisch bei ihrem Futter. Aber bei Casoian Gold mit Lachs kann sie es kaum abwarten, dass ich iht ihren Teller hinstelle...Sie liebt es!!
+                </p>
+                <p class="autor">–Natascha A.</p>
+            </div>
+            <a href="index.html" class="btn-testimonial">
+                <span></span>
+            </a>
+            <a href="index.html" class="btn-testimonial">
+                <span></span>
+            </a>
         </div>
-        <a class="button-info" href="index.html">
-            Jetzt bestellen
+       </div>
+       
+       <div class="btn-zentrieren">
+        <a href="index.html" class="btn-probierpaket">Probierpaket bestellen
             <span></span>
         </a>
-       <div>
-           <div>
-            <h3>Unser Futter fördert die Gesundheit Ihrer Fellnase</h3>
-           </div>
-           <div>
-               <img src="Bilder/hund-stehend-sw.png" width="300px">
-           </div>
+        <a href="index.html" class="btn-kaufen-2">Futter kaufen und Ihrem Liebling gutes tun
+            <span></span>
+        </a>
+    
+            
        </div>
-
-       <div>
-           <p>Siegel</p>
-       </div>
-
-       <div>
-        <h3>Wieso Hundehalter Caspian Gold lieben</h3>
-        <img src="Bilder/cavalier-spaniel.jpg" width="300px">
-        <div>
-            <p>
-                Meine Chanel ist sehr wählerisch bei ihrem Futter. Aber bei Casoian Gold mit Lachs kann sie es kaum abwarten, dass ich iht ihren Teller hinstelle...Sie liebt es!!
-            <br><b>Natascha A.</b>
-            </p>
-        </div>
-       </div>
-        <button>Probierpaket bestellen</button>
-        <button>Futter kaufen und Ihrem Liebling gutes tun!</button>
-
-           
+      
     </main> 
-</div>
+</div> 
+    <footer>
+        <div class="footerstyle grid">
+            <ul>
+                <li>Instagram</li>
+                <li>Facebook</li>
+            </ul>
+        </div>
 
-<footer>
-    <div class="grid">
-        <p>Cpyright</p>
-        <ul>
-            <li>Instagram</li>
-            <li>Facebook</li>
-        </ul>
-    </div>
-</footer>
+        
+    </footer>
+
+
+
+    
+
 
 </body>
 </html>
