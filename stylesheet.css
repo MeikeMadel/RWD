@@ -512,7 +512,7 @@ padding: 0;
 }
 
 
-.kreis-grafik-groß {
+#kreis-grafik-groß {
     position: relative;
     text-align: center;
     border: 1px solid #B3A992;
@@ -521,7 +521,7 @@ padding: 0;
     border-radius: 50%;
 }
 
-.kreis-grafik-groß div {
+#kreis-grafik-groß div {
     display: inline-block;
     margin: 0 auto;
     border: 1px solid #B3A992;
@@ -531,7 +531,7 @@ padding: 0;
     margin: 3px;
 }
 
-.kreis-grafik-klein {
+#kreis-grafik-klein {
     position: relative;
     width: 100%;
     text-align: center;
@@ -541,7 +541,7 @@ padding: 0;
     border-radius: 50%;
 }
 
-.kreis-grafik-klein div {
+#kreis-grafik-klein div {
     display: inline-block;
     margin: 0 auto;
     border: 1px solid #B3A992;
@@ -549,6 +549,18 @@ padding: 0;
     height: 2.5rem;
     border-radius: 50%;
     margin: 3px;
+}
+
+.aktiv {
+    border: 1px solid #02AEA8 !important;
+}
+
+.aktiv div{
+    border: 1px solid #02AEA8 !important;
+}
+
+.aktiv p {
+    color: #02AEA8;
 }
 
 
@@ -917,6 +929,11 @@ footer {
 }
 
 
+.btn-zentrieren {
+    margin-top: 15%;
+    margin-bottom: -10%;
+}
+
 
 }
 
@@ -927,5 +944,39 @@ footer {
     h1 {
         color: pink; 
     }
+
+    /*Header*/
+
+    .header-background img {
+        width: 30%;
+        left: 19.5%;
+        top: 65%;
+    }
+
+    /*Fonts*/
+
+    h1 {
+        margin-top: 10%;
+    }
+    h1,h2 {
+        font-family:'Playfair Display';
+        text-align: center;
+        font-size: 4em;
+      
+    }
+    
+    h2 {
+        font-size: 2em;
+        font-family: 'PlayfairDisplay-Regular';
+        margin-top: 20%;
+    }
+    
+    h3 {
+        font-family: 'Playfair Display';
+        font-weight:100;
+        color: #8b745b;
+        font-size: 1.8em;
+    }
+    
     
 }
