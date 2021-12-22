@@ -1,0 +1,38 @@
+{
+  "name": "rwd-website",
+  "version": "1.0.0",
+  "description": "rwd",
+  "main": "index.js",
+  "dependencies": {
+    "@types/jquery": "^3.5.10",
+    "bl": "^2.2.1",
+    "bson": "^1.1.5",
+    "core-util-is": "^1.0.2",
+    "denque": "^1.5.0",
+    "inherits": "^2.0.4",
+    "isarray": "^1.0.0",
+    "jquery": "^3.6.0",
+    "memory-pager": "^1.5.0",
+    "mongodb": "^3.6.3",
+    "process-nextick-args": "^2.0.1",
+    "readable-stream": "^2.3.7",
+    "require_optional": "^1.0.1",
+    "resolve-from": "^2.0.0",
+    "safe-buffer": "^5.2.1",
+    "saslprep": "^1.0.3",
+    "semver": "^5.7.1",
+    "sparse-bitfield": "^3.0.3",
+    "string_decoder": "^1.1.1",
+    "util-deprecate": "^1.0.2"
+  },
+  "devDependencies": {
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.4",
+    "typings": "^2.1.1"
+  },
+  "scripts": {
+    "start": "node RWD/server.js remote"
+  },
+  "author": "Meike Madel",
+  "license": "ISC"
+}
