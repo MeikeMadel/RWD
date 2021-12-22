@@ -663,9 +663,7 @@ footer {
 @media screen and (min-width: 620px) {
 
      /*test*/
-     h1 {
-        color: blue;
-    }
+   
 
     /*button*/ 
 
@@ -756,9 +754,7 @@ footer {
 /*large tablets & laptop*/
 @media screen and (min-width: 960px) {
 
-    h1 {
-        color: red;
-    }
+    
 
         /*Button testimonial */
 
@@ -941,9 +937,7 @@ footer {
 @media screen and (min-width: 1200px) {
 
     /*test*/ 
-    h1 {
-        color: pink; 
-    }
+
 
     /*Header*/
 
