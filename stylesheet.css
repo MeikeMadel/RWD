@@ -22,6 +22,11 @@ body, html {
     height: 500vh;
 }
 
+#wrapper {
+    width: 95%;
+    margin: 0px auto;
+}
+
 /*test*/
 h1 {
     color:teal;
@@ -39,20 +44,25 @@ h1 {
     font-family: 'Playfair Display Regular';
     src: url('Bilder/Fonts/Playfair_Display/Playfair_Display/static/PlayfairDisplay-Regular.ttf');
 }
+
+
+/*headings*/
 h1 {
     margin-top: 10%;
 }
-h1,h2 {
+h1{
     font-family:'Playfair Display';
     text-align: center;
-    font-size: 2em;
+    font-size: 2.5em;
   
 }
 
 h2 {
-    font-size: 1.5em;
-    font-weight: 100;
-    margin-top: 20%;
+    font-family:'Playfair Display Regular';
+    font-weight: 1;
+    font-size: 1.8em; 
+    text-align: center;
+    margin-top: 0%;
 }
 
 h3 {
@@ -222,12 +232,6 @@ height: 50em;
 
 /*header*/
 
-.logo {
-    width: 45px;
-    position: absolute;
-    top: 1%;
-    left: 47%;
-}
 
 header p {
     color: #fff;
@@ -239,38 +243,33 @@ header p {
 
 .header-background {
     grid-column: 1/13;
-    margin-top: 14%;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-top: 4%;
+
+    height: 57%;
     background: url(Bilder/hund-meer.mp4);
     background-repeat: no-repeat;
     color: white;
     padding-top: 10%;
     position: relative;
-    padding-bottom: 20%;
     background-size: cover;
     position: top;
+    text-align: center;
+
     
 }
 
 
-
-
-
-
 .header-background img {
-  width: 40%;
-  position: absolute;
-  justify-content: center;
-  transform: translate(70%);
-  top: 50%;
-  animation: fadeInAndUp 1.5s;
+    width: 45%;
+    transform: translate(0%);
+    animation: fadeInAndUp 2s;
 }
 
 @keyframes fadeInAndUp {
 from {
     opacity: 0;
-    transform: translate3d(70%, 70%, 0);
+    transform: translate3d(0%, 50%, 0);
+
     
 }
 to{
@@ -336,6 +335,7 @@ to{
     display: block;
     z-index: -1;
     margin-top: 10%;
+    display: none;
 }
 
 .ikra1 {
@@ -388,13 +388,15 @@ to{
 /*Einführung*/
 
 .headerFadeIn, .firstTextFadeIn, .scrollHeadingAnimation {
-    animation: fadeIn 2s;
+    animation: fadeIn 3s;
 }
 
 #first-text {
     text-align: center;
     font-family: 'Playfair Display Regular';
+    letter-spacing: 0.3pt;
     font-size: 0.9em;
+    line-height: 2;
     font-weight:lighter;
     margin-bottom: 14%;
     margin-left: 10%;
@@ -503,7 +505,7 @@ to{
 .img-1 {
     position: fixed;
     display: block;
-    top: 50%;
+    top: 70%;
     right: -2000px; 
     white-space: nowrap;
 }
@@ -511,21 +513,21 @@ to{
 .img-2 {
     position: fixed;
     display: block;
-    top: 50%;
+    top: 70%;
     right: -2700px; 
     white-space: nowrap;
 }
 
 .img-3 {
     position: fixed;
-    top: 55%;
+    top: 60%;
     right: -3400px; 
     white-space: nowrap;
 }
 
 .img-4 {
     position: fixed;
-    top: 55%;
+    top: 63%;
     right: -4100px; 
     white-space: nowrap;
 }
@@ -799,7 +801,7 @@ to{
 /*Footer*/ 
 
 footer {
-    background: url(/RWD/Bilder/footer-background.png);
+    background: url(Bilder/footer-background.png);
     background-repeat: no-repeat;
     background-position: center;
     height: 500px;
@@ -825,7 +827,7 @@ footer {
 
 
 /*small tablet*/
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 620px) and (max-width: 1024px){
 
      /*test*/
      h1 {
@@ -841,17 +843,15 @@ footer {
 
 
     /*Header*/
+    
+    .header-background {
+        height: 55%;
+    }
 
     .header-background img {
-        width: 40%;
-        left: 10%;
-        top: 60%;
+        width: 35%;
     }
 
-    .header-background {
-        margin-top: 10.5%;
-        
-    }
 
     .logo {
         width: 50px;
@@ -860,88 +860,7 @@ footer {
 
     /*Argumente*/
 
-    .main_list {
-        width: 100%;
-        text-align: center;
-        text-transform: uppercase;
-        margin-bottom: 10%;
-    }
     
-    .main_list li:nth-child(1) {
-        grid-column: 1/5;
-    }
-
-    
-    .main_list li:nth-child(2) {
-        grid-column: 5/9;
-    }
-    .main_list li:nth-child(3) {
-        grid-column: 9/13;
-    }
-    #fadeInFirst {
-        background: url(Bilder/futter-loeffel-teller-seitlich-unscharf.png) 50% 250px no-repeat;
-        background-size: 100%;
-        background-color: #8B745B;
-        transition: .3s;
-        font-size: 0.9em;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-
-    #fadeInFirst:hover {
-        background: url(Bilder/futter-loeffel-teller-seitlich-unscharf.png) 50% 100% no-repeat;
-        background-size: 100%;
-        background-color: #02AEA8;
-    }
-    #fadeIn{
-        background: url(Bilder/dosendeckel-final.png) 50% 250px no-repeat;
-        background-size: 100%;
-        background-color: #8B745B;
-        transition: .3s;
-        font-size: 0.9em;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-
-    #fadeIn:hover {
-        background: url(Bilder/dosendeckel-final.png) 50% 100% no-repeat;
-        background-size: 100%;
-        background-color: #02AEA8;
-    }
- 
-    #fadeInThird {
-        background: url(Bilder/loeffel-frei-final-2.png) 50% 250px no-repeat;
-        background-size: 100%;
-        background-color: #8B745B;
-        transition: .3s;
-        font-size: 0.9em;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-
-    #fadeInThird:hover {
-        background: url(Bilder/loeffel-frei-final-2.png) 50% 100% no-repeat;
-        background-size: 100%;
-        background-color: #02AEA8;
-    }
-    
-    
- 
-
-    .main_list li a {
-        display: grid;
-        font-family: futura-pt, sans-serif;;
-        line-height: 15em;
-        text-align: center;
-        color: #fff;
-        transition: .3s;
-        text-transform: uppercase;
-    }
-    
-    .main_list li:hover a {
-        line-height: 10em;
-    }
-
 
     /*Grafik gesindheit*/
 
@@ -1010,9 +929,13 @@ footer {
     }
 
     .header-background {
-        margin-top: 8%;
-        
+        height: 53%;
     }
+
+    .header-background img {
+        width: 30%;
+    }
+
 
     .logo {
         width: 50px;
@@ -1086,6 +1009,8 @@ footer {
 
 
     /*Argumente*/
+
+
     .main_list {
         width: 98%;
         text-align: center;
@@ -1104,25 +1029,58 @@ footer {
     .main_list li:nth-child(3) {
         grid-column: 9/13;
     }
-    
-    .main_list li {
+
+
+    #fadeInFirst {
         background: url(Bilder/futter-loeffel-teller-seitlich-unscharf.png) 50% 250px no-repeat;
         background-size: 100%;
         background-color: #8B745B;
         transition: .3s;
         font-size: 0.9em;
+        margin-left: 5%;
+        margin-right: 5%;
     }
-    
-    .main_list li:hover {
+
+    #fadeInFirst:hover {
         background: url(Bilder/futter-loeffel-teller-seitlich-unscharf.png) 50% 100% no-repeat;
         background-size: 100%;
         background-color: #02AEA8;
     }
-    
-    .main_list li {
+    #fadeIn{
+        background: url(Bilder/dosendeckel-final.png) 50% 250px no-repeat;
+        background-size: 100%;
+        background-color: #8B745B;
+        transition: .3s;
+        font-size: 0.9em;
         margin-left: 5%;
         margin-right: 5%;
     }
+
+    #fadeIn:hover {
+        background: url(Bilder/dosendeckel-final.png) 50% 100% no-repeat;
+        background-size: 100%;
+        background-color: #02AEA8;
+    }
+ 
+    #fadeInThird {
+        background: url(Bilder/loeffel-frei-final-2.png) 50% 250px no-repeat;
+        background-size: 100%;
+        background-color: #8B745B;
+        transition: .3s;
+        font-size: 0.9em;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #fadeInThird:hover {
+        background: url(Bilder/loeffel-frei-final-2.png) 50% 100% no-repeat;
+        background-size: 100%;
+        background-color: #02AEA8;
+    }
+    
+    
+ 
+
     .main_list li a {
         display: grid;
         font-family: futura-pt, sans-serif;;
@@ -1136,6 +1094,8 @@ footer {
     .main_list li:hover a {
         line-height: 10em;
     }
+
+
 
     /*Kaufangebot*/
     .buy {
@@ -1340,7 +1300,7 @@ footer {
     h2 {
         font-size: 2em;
         font-family: 'PlayfairDisplay-Regular';
-        margin-top: 20%;
+        
     }
     
     h3 {

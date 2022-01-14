@@ -17,6 +17,7 @@ var RWD;
     let divAnimateRight = document.getElementById("fadeInThird");
     let hideWhenBoxInView = new IntersectionObserver((entries) => {
         if (entries[0].intersectionRatio <= 0 === false) { // Wenn in viewport
+            console.log("Jetzt");
             divAnimateLeft.classList.add("fadeInLeft");
             divAnimateRight.classList.add("fadeInRight");
         }
@@ -24,7 +25,7 @@ var RWD;
     hideWhenBoxInView.observe(divAnimateLeft);
     hideWhenBoxInView.observe(divAnimateRight);
     let secondHeading = document.getElementById("secondHeading");
-    let firstText = document.getElementById("firstText");
+    let firstText = document.getElementById("first-text");
     let fadeInWhenBoxInView = new IntersectionObserver((entries) => {
         if (entries[0].intersectionRatio <= 0 === false) { // Wenn in viewport
             secondHeading.classList.add("headerFadeIn");
