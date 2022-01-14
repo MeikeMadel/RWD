@@ -3,7 +3,6 @@
 
 <head>
 <script type="text/javascript" src="script.js" defer></script>
-<script type="text/javascript" src="jquery.js" defer></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Caspian Gold</title>
@@ -12,14 +11,15 @@
 </head>
 
 <body>
-<div >
+<div id="wrapper">
     <header>
         <section class="grid">
+            <img class="logo" src="Bilder/caspian-gold-logo-hund.jpg">
             <div class="header-background">
                 <p>Ausnahmslos hochwertig - Nur das Beste für deinen treuen Begleiter</p>
                 <div class="line"></div>
                 <h1>Nothing but luxury</h1>
-                <img src="Bilder/Hundefutter-dose.png">
+                <img src="Bilder/hundefutter-gold-neu3.png">
             </div>
         </section>
 
@@ -27,41 +27,74 @@
     </header>
         
     <main>
-        <p id="demo"></p>
+
         
-        <div class="ikra ikra1 wow fadeInUpHuge"></div>
-        <div class="ikra ikra2 wow fadeInUpHuge"></div>
-        <div class="ikra ikra3 wow fadeInUpHuge"></div>
-        <div class="test"></div>
-        <div id="dogfood"></div>
+        <div class="ikra ikra1 fadeInUpHuge"></div>
+        <div class="ikra ikra2 fadeInUpHuge"></div>
+        <div class="ikra ikra3 fadeInUpHuge"></div>
+        <div class="ikra ikra4 fadeInUpHuge"></div>
+        <div class="ikra ikra5 fadeInUpHuge"></div>
+
         
-        <h2>Caspian Gold - Aus Lieber zu Ihrem Hund</h2>
+        <h2 id="secondHeading">Caspian Gold - Aus Lieber zu Ihrem Hund</h2>
         <p id="first-text">Verwöhne deinen Vierbeiner mit unserem hochwertigen Caspian Gold Hundefutter mit Lachs und bereite ihm damit eine besondere Freude!</p>
 
         <div class="line2"></div>
         <ul class="main_list grid">
-            <li class="fadeInLeft">
+            <li id="fadeInFirst">
                 <a href="index.html">Hoher Fischanteil</a>
             </li>
-             <li class="fadeIn">
+             <li id="fadeIn">
                 <a href="index.html">Gesundheit und Vitalität</a>
             </li>
-            <li class="fadeInRight">
+            <li id="fadeInThird">
                 <a href="index.html">Ohne künstliche Zusätze</a>
             </li>
         </ul>
         <div class="line3"></div>
         <h3 id="scrollheading">Die besten Zutaten für das beste Hundefutter</h3>
-       <div class="scrollcontent">
-           <section class="bereich"><h3 class="fadescroll">Fangfrischer Lachs</h3></section>
-           <section class="bereich"><img  src="Bilder/lachs-fisch.png" width="300px" class="fadescroll"></section>
-           <section class="bereich"><h3 class="moveleft">Süßkartoffel</h3></section>
-           <section class="bereich"><h3 class="fadescroll">Lachsöl</h3></section>
-           <section class="bereich"><h3 class="moveleft">Karotte</h3></section>
-       </div>
-       
+
+      <div class="ingredient-slideshow">
+        <div class="scrollcontent">
+            <ul>
+                <li>
+                    <h3>Fangfrischer Lachs</h3>
+                 </li>
+                <li>
+                    <h3>Süßkartoffel</h3>
+                </li>
+                <li>
+                 <h3>Karotte</h3>
+                </li>
+                <li>
+                    <h3>Lachsöl</h3>
+                 </li>
+            </ul>
+         </div>
+
+         <div class="ingredient-container">
+            <ul class="ingredient-listing">
+                <li>
+                    <img class="img-1" src="Bilder/fisch-ausgeschnitten.png" width="300px">
+                </li>
+                <li>
+                    <img class="img-2" src="Bilder/suesskartoffel.png" width="300px">
+                </li>
+                <li>
+                    <img class="img-3" src="Bilder/karotte-alternative.png" width="400px">
+                </li>
+                <li>
+                    <img class="img-4" src="Bilder/oellflasche.png" width="300px">
+                </li>
+
+            </ul>
+        </div>
+
+
+      </div>
+
         <div class="buy grid">
-            <img src="Bilder/hundefutter-loeffel.jpg">
+            <img src="Bilder/dose-mit-loeffel-neu.png">
             <div class="flex-container">
                 <h3>Caspian Gold mit Lachs</h3>
             <p>Alleinfutter für russische Kampfhunde – für kleine bis mittelgroße [bis 10kg]</p>
@@ -95,29 +128,57 @@
       
            <div class="gesundheit grid">
             <h3>Unser Futter fördert die Gesundheit Ihrer Fellnase</h3>
-            <img src="Bilder/gesundheit-bild-hund.png">
+            <img src="Bilder/Grafi-Gesundheit-Fellnase.png">
            </div>
 
        <div class="siegel grid">
-           <img src="Bilder/siegel.png">
+           <div>
+            <img src="Bilder/siegel-qualitaet-final-2.png">
+            <p>Geprüfte Qualität</p>
+           </div>
+           <div>
+            <img src="Bilder/siegel-zusaetze-final.png">
+            <p>Ohne künstliche Zusätze</p>
+           </div>
+           <div>
+           <img src="Bilder/siegel-gentechnik-final-2.png">
+            <p>Ohne Gentechnik</p>
+           </div>
+           <div>
+           <img src="Bilder/siegel-tierversuche-final.png">
+            <p>Frei von Tierversuchen</p>
+           </div>
        </div>
-
+      
        <div class="testimonials grid">
         <h3>Wieso Hundehalter Caspian Gold lieben</h3>
-        <img src="Bilder/cavalier-spaniel.jpg">
+        <img id="pic1" class="showpic" src="Bilder/cavalier-spaniel.jpg">
+        <img id="pic2" class="hidepic" src="Bilder/hund-auf-kissen.jpg">
+        <img id="pic3" class="hidepic" src="Bilder/chichaua.jpg">
         <div class="background">
-            <div>
+            <div id="text1" class="showText">
+                <img class="quote" src="Bilder/quote.png">
                 <p>
-                    Meine Chanel ist sehr wählerisch bei ihrem Futter. Aber bei Casoian Gold mit Lachs kann sie es kaum abwarten, dass ich iht ihren Teller hinstelle...Sie liebt es!!
+                    Meine Chanel ist sehr wählerisch bei ihrem Futter. Aber bei Caspian Gold mit Lachs kann sie es kaum abwarten, dass ich ihr ihren Teller hinstelle...Sie liebt es!!
                 </p>
                 <p class="autor">–Natascha A.</p>
             </div>
-            <a href="index.html" class="btn-testimonial">
-                <span></span>
-            </a>
-            <a href="index.html" class="btn-testimonial">
-                <span></span>
-            </a>
+            <div id="text2" class="hideText">
+                <img class="quote" src="Bilder/quote.png">
+                <p>
+                    Ich habe ein Probierpaket Caspian Gold mit Lachs für meine Casey gekauft. Sie war von Anfang an begesitert und ihr Fell ist schon viel weicher geworden!
+                </p>
+                <p class="autor">–Katja K.</p>
+            </div>
+            <div id="text3" class="hideText">
+                <img class="quote" src="Bilder/quote.png">
+                <p>
+                    Vor kurzem habe ich das erste mal Caspian Gold mit Lachs für meinen Chihuahua gekauft. Seitdem habe ich das Gefühl ihre Gehirnfunktion hat sich wirklich verbessert.
+                </p>
+                <p class="autor">–Larissa P.</p>
+            </div>
+            <button class="btn-testimonial" id="button-left"></button>
+            <button class="btn-testimonial" id="button-right"></button>
         </div>
        </div>
        
@@ -129,13 +190,16 @@
             <span></span>
         </a>
     
-            
+
        </div>
+       <img src="Bilder/caspian-gold-dose.png" width="400px">
       
     </main> 
 </div> 
     <footer>
+        
         <div class="footerstyle grid">
+            
             <ul>
                 <li>Instagram</li>
                 <li>Facebook</li>
