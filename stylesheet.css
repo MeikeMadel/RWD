@@ -19,18 +19,9 @@ body {
 
 body, html {
     width: 100%;
-    height: 500vh;
+    height: 800vh;
 }
 
-#wrapper {
-    width: 95%;
-    margin: 0px auto;
-}
-
-/*test*/
-h1 {
-    color:teal;
-}
 
 
 
@@ -45,17 +36,45 @@ h1 {
     src: url('Bilder/Fonts/Playfair_Display/Playfair_Display/static/PlayfairDisplay-Regular.ttf');
 }
 
+/*test*/
+
+.horizontal-section {
+    padding: 100px 0;
+    background-color: pink;
+}
+
+.sticky-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: sticky;
+    top: 100px;
+}
+
+.element {
+    width: 500px;
+    height: 400px;
+    background-color: purple;
+    margin: 0 20px 0 0;
+    flex-shrink: 0;
+}
+
+.element-wrapper {
+    position: relative;
+    display: flex;
+}
+
 
 /*headings*/
-h1 {
-    margin-top: 10%;
-}
+
 h1{
     font-family:'Playfair Display';
     text-align: center;
     font-size: 2.5em;
-  
+    margin-top: 10%;
+
 }
+  
+
 
 h2 {
     font-family:'Playfair Display Regular';
@@ -97,6 +116,7 @@ p {
     z-index: 3;
     position: relative;
     overflow: hidden;
+    
 }
 
 .btn-kaufen span, .btn-kaufen-2 span {
@@ -136,6 +156,7 @@ text-transform: uppercase;
 position: relative;
 overflow: hidden;
 margin-bottom: 10px;
+width: 335px;
 }
 
 
@@ -231,21 +252,34 @@ height: 50em;
 }
 
 /*header*/
+.p1 {
+    color: #B3A992;
+    font-family: 'Playfair Display Regular';
+    letter-spacing: 0.7pt;
+    font-weight: lighter;
+    font-size: 1.3em;
+    text-align: center;
+    margin-left: 1.1%;
+    margin-right: 1.1%;
+    opacity: 0.8;
 
+}
 
-header p {
+.p2 {
     color: #fff;
     text-transform: uppercase;
     font-size: 0.9em;
-    margin-bottom: 10%;
+    margin-bottom: 3%;
+    margin-top: 3%;
     text-align: center;
 }
 
 .header-background {
     grid-column: 1/13;
     margin-top: 4%;
-
-    height: 57%;
+    margin-left: 2%;
+    margin-right: 2%;
+    height: 60%;
     background: url(Bilder/hund-meer.mp4);
     background-repeat: no-repeat;
     color: white;
@@ -260,7 +294,7 @@ header p {
 
 
 .header-background img {
-    width: 45%;
+    width: 50%;
     transform: translate(0%);
     animation: fadeInAndUp 2s;
 }
@@ -390,7 +424,11 @@ to{
 .headerFadeIn, .firstTextFadeIn, .scrollHeadingAnimation {
     animation: fadeIn 3s;
 }
+#secondHeading {
+    margin-left: 7%;
+    margin-right: 7%;
 
+}
 #first-text {
     text-align: center;
     font-family: 'Playfair Display Regular';
@@ -422,6 +460,8 @@ to{
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 15%;
+    
+
 }
 
 .main_list li {
@@ -433,7 +473,8 @@ to{
 }
 
 .main_list li {
-    margin: 2%;
+    margin: 1.5% 5%;
+
 }
 .main_list li a {
     font-family: futura-pt, sans-serif;;
@@ -444,6 +485,8 @@ to{
     text-transform: uppercase;
 }
 
+
+
 .fadeInLeft {
     animation: fadeInLeft 1.5s;
     animation-duration: 1.5s;
@@ -453,6 +496,8 @@ to{
     animation: fadeInRight 1.5s;
     animation-duration: 1.5s;
 }
+
+
 
 
 @keyframes fadeInLeft {
@@ -489,76 +534,91 @@ to{
 
 .scrollcontent h3 {
     font-family: 'Playfair Display';
-    font-size: 45pt;
-    color: #D6D6D6;
+    font-size: 40pt;
+    color: #e4e3e3;
     font-weight: bold;
-    margin-top: 30%;
+    margin-top: 40%;
     text-align: center;
 
 }
 
 .scrollcontent li:nth-child(4) {
-    margin-bottom: 30%;
+    margin-bottom: 50%;
 }
 
 
 .img-1 {
+    width:  80%;
     position: fixed;
     display: block;
-    top: 70%;
+    top: 55%;
     right: -2000px; 
     white-space: nowrap;
+    opacity: 0.8;
 }
 
 .img-2 {
+    width:  80%;
     position: fixed;
     display: block;
-    top: 70%;
+    top: 55%;
     right: -2700px; 
     white-space: nowrap;
+    opacity: 0.7;
 }
 
 .img-3 {
+    width:  80%;
     position: fixed;
-    top: 60%;
+    top: 55%;
     right: -3400px; 
     white-space: nowrap;
+    opacity: 0.7;
 }
 
 .img-4 {
+    width:  70%;
     position: fixed;
-    top: 63%;
+    top: 55%;
     right: -4100px; 
     white-space: nowrap;
+    opacity: 0.7;
 }
 
-
-.scrollInTest{
-    display: block;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    position: absolute;
-    left: 0;
-    top: -50%;
-    animation: scrollIn 20s;
-}
-
-
-@keyframes scrollIn {
-    from {
-        transform: translateY(-50%) translateX(100vw);
-    }
-
-    to {
-        transform: none
-    }
-}
 
 /*Kaufangebot*/
 .buy {
     text-align: center;
+}
+
+.flex-container h3 {
+    margin-top: -0.1%;
+}
+
+.flex-container p {
+    margin-left: 2%;
+    margin-right: 2%;
+
+}
+#stoerer {
+    grid-column: 2/5;
+    background: #8b745b;
+    margin-top: 20%;
+    color: white;
+    width: 110px;
+    height: 60px;
+    -moz-border-radius: 350px / 200px;
+    -webkit-border-radius: 350px / 200px;
+    border-radius: 350px / 200px;
+    transform: rotate(-10deg);
+}
+
+#stoerer p {
+    margin-top: 15%;
+    color: white;
+    font-weight: lighter;
+    font-size: 1.2em;
+    letter-spacing: 0.8pt;
 }
 
 .buy div {
@@ -572,19 +632,20 @@ to{
     object-position: center;
 }
 
-.flex-container p {
-    margin: 5%;
-}
+
+
 
 .preis-alt {
     text-decoration: line-through;
     font-size: 0.9em;
+    margin-top: 5%;
 
 }
 
 .preis-aktuell {
+    margin-bottom: 5%;
     font-weight: 900;
-    font-size: 1.5em;
+    font-size: 1.8em;
 }
 
 .div-button {
@@ -683,18 +744,17 @@ to{
 
 .gesundheit img {
     grid-column: 1/13;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 /*Siegel*/
 
 .siegel img {
-    width: 100px;
+    width: 70px;
 }
 
-
 .siegel div:nth-child(1) {
-    grid-column: 3/6;
+    grid-column: 2/3;
     text-align: center;
     font-size: 0.8em;
     margin-bottom: 10%;
@@ -705,9 +765,10 @@ to{
 }
 
 .siegel div:nth-child(2) {
+    grid-column: 5/6;
     text-align: center;
     font-size: 0.8em;
-    grid-column: 7/10;
+
     margin-bottom: 10%;
 }
 .siegel div:nth-child(2) p{
@@ -715,24 +776,28 @@ to{
 }
 
 .siegel div:nth-child(3) {
-    grid-column: 3/6;
-    grid-row: 2;
+    grid-column: 8/9;
+    grid-row: 1;
     text-align: center;
     font-size: 0.8em;
+  
 }
 .siegel div:nth-child(3) p{
     margin-top: 1%;
 }
 
 .siegel div:nth-child(4) {
+    grid-column: 11/12;
+
     text-align: center;
-    grid-row: 2;
+    grid-row: 1;
     font-size: 0.8em;
-    grid-column: 7/10;
+
 }
 .siegel div:nth-child(4) p{
     margin-top: 1%;
 }
+
 
 /*Testimonials*/
 
@@ -781,6 +846,8 @@ to{
 .autor {
     margin-top: 5%;
     font-weight: 700;
+    font-family: 'Playfair-Display-Regular';
+    font-size: 1em;
 }
 
 .showpic {
@@ -800,14 +867,43 @@ to{
 
 /*Footer*/ 
 
-footer {
-    background: url(Bilder/footer-background.png);
+
+
+.footerstyle {
+    grid-column: 1/13;
+    margin-top: 30%;
+    position: relative;
+    text-align: center;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0,0,0, 100)
+      ),url(Bilder/chichaua.jpg);
     background-repeat: no-repeat;
-    background-position: center;
-    height: 500px;
-    padding: 10%;
+    background-size: cover;
+    box-shadow: inset 0px 8px 6px -0.5px rgb(255, 255, 255);
    
 }
+
+.footerpic {
+    width: 50%;
+    margin-top: -30%;
+    
+}
+
+#footerDeckel{
+    width: 47%;
+    margin-top: -45%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.deckelFadeIn {
+    transform: translate(0%);
+    animation: fadeInAndUp 3s;
+}
+
+
 .footerstyle ul {
     color: #B3A992;
     text-transform: uppercase;
@@ -815,8 +911,10 @@ footer {
     font-size: 0.9em;  
     text-align: center;
     display: flex;
-    grid-column: 1/13;
-    margin: 30em auto 0em auto;
+    margin-top: 5em;
+    margin-bottom: 4em;
+    position: relative;
+    left: 28%;
 
   
 }
@@ -825,31 +923,49 @@ footer {
     margin: 0 30px;
 }
 
+.footerstyle a:hover {
+    color: #018f8a;
+    cursor: pointer;
+    transition: ease-in-out 0.5s;
+   
+}
+
+.footerstyle hr {
+        width: 50%;
+        height: 0.8px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5em;
+        background-color: #B3A992;
+        border: 0 none;
+        
+}
+
+
+
+
 
 /*small tablet*/
-@media screen and (min-width: 620px) and (max-width: 1024px){
+@media screen and (min-width: 620px) {
+    
 
      /*test*/
      h1 {
          color: blue;
+         font-size: 2.8em;
      }
 
-    /*button*/ 
+     
 
-    .btn-probierpaket { 
-        margin-bottom: 0;
-    }
-
-
-
+    
     /*Header*/
     
     .header-background {
-        height: 55%;
+        height: 57%;
     }
 
     .header-background img {
-        width: 35%;
+        width: 47%;
     }
 
 
@@ -858,11 +974,78 @@ footer {
     }
    
 
-    /*Argumente*/
+    
+
+.main_list {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10%;
+    
+
+}
+
+.main_list li {
+    background-size: 100%;
+    background-color: #8B745B;
+    font-size: 0.9em;
+  
+}
+
+.main_list li {
+    margin: 2% 5%;
+}
+.main_list li a {
+    font-family: futura-pt, sans-serif;;
+    line-height: 5em;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+    /*Scrollsection*/
+
+    
+    .scrollcontent h3 {
+        font-size: 50pt;
+        margin-top: 35%;
+    
+    }
+    
+    .scrollcontent li:nth-child(4) {
+        margin-bottom: 40%;
+    }
+    
+    
+    .img-1 {
+        width: 60%;
+        top: 30%;
+        right: -3000px; 
+    }
+    
+    .img-2 {
+        width:  60%;
+        top: 30%;
+        right: -3700px; 
+    }
+    
+    .img-3 {
+        width:  60%;
+        top: 30%;
+        right: -4400px; 
+    }
+    
+    .img-4 {
+        width:  50%;
+        top: 30%;
+        right: -5100px; 
+    }
+    
 
     
 
-    /*Grafik gesindheit*/
+    /*Grafik Gesundheit*/
 
     .gesundheit img {
         grid-column: 1/13;
@@ -919,21 +1102,123 @@ footer {
         margin-top: 1%;
     }
 
+    /*Testimonials*/
+
+    .btn-kaufen-2 {
+        width: 400px;
+    }
+    
+
+    .btn-probierpaket {
+    margin-bottom: 10px;
+    width: 400px;
+    }
+
+
+    /*Footer*/
+
+    .footerstyle {
+        grid-column: 1/13;
+        margin-top: 30%;
+        position: relative;
+        text-align: center;
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0),
+            rgba(0,0,0, 100)
+          ),url(Bilder/chichaua.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: inset 0px 8px 6px -0.5px rgb(255, 255, 255);
+        
+       
+    }
+    
+    .footerpic {
+        width: 50%;
+        margin-top: -35%;
+        
+    }
+    
+    #footerDeckel{
+        width: 50%;
+        margin-top: -45%;
+    }
+    
+    .deckelFadeIn {
+        transform: translate(0%);
+        animation: fadeInAndUp 3s;
+    }
+    
+    
+    .footerstyle ul {
+        left: 30%;
+    }
+    
+    
+    .footerstyle hr {
+            width: 50%;
+            height: 0.8px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 5em;
+            background-color: #B3A992;
+            border: 0 none;
+            
+    }
 }
+    
+
+    
 
 /*large tablets & laptop*/
 @media screen and (min-width: 960px) {
 
+    
+
     h1 {
-        color:pink;
+        color: pink;
+        font-size: 4em;
+    }
+
+    .p1 {
+        letter-spacing: 0.7pt;
+        font-size: 2em;
+        text-align: center;
+        margin-left: 1.1%;
+        margin-right: 1.1%;
+        opacity: 0.8;
+    
+    }
+
+    .p2 {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        margin-bottom: 3%;
+        margin-top: 3%;
+        text-align: center;
+    }
+
+    header p {
+        font-size: 1em;
+        margin-bottom: 5%;
+        text-align: center;
     }
 
     .header-background {
-        height: 53%;
+        height: 60%;
+        margin-left: 4%;
+        margin-right: 4%;
     }
 
     .header-background img {
-        width: 30%;
+        width: 40%;
+    }
+
+    #wrapper {
+        width: 100%;
+        margin: 0px auto;
     }
 
 
@@ -942,46 +1227,78 @@ footer {
         left: 50%;
     }
 
+    /*button*/ 
+    
+    
+    
+
     /*Hundefutter Hintergrund*/
 
+    .ikra {
+        margin-top: 10%;
+        display: block;
+    }
+
     .ikra1 {
-        width: 77px;
-        height: 153px;
-    
-        left: 0%;
-        top: 50%;
+        width: 60px;
+        left: 1%;
+        margin-top: 30%;
+        
         animation: fadeInUpHuge 5s;
         animation-duration: 2s;
+        background: url(Bilder/hundefutter-einzeln-scharf.png) no-repeat;
+        background-size: contain;
         
     }
     
     .ikra2 {
-        width: 29px;
+        width: 20px;
         height: 30px;
-     
+        background: url(Bilder/Hundefutter-unscharf2.png) no-repeat;
+        background-size: contain;
         left: 10%;
-        top: 15%;
+        top: 0%;
+        margin-top: 20%;
+
         animation: fadeInUpHuge 2s;
         animation-duration: 0.5s;
     }
     
     .ikra3 {
-        width: 66px;
+        width: 40px;
         height: 68px;
-        left: 80%;
-        top: 30%;
+        left: 95%;
+        top: 0%;
         animation: fadeInUpHuge 3.5s;
         animation-duration: 3s;
+        margin-top: 15%;
+        background: url(Bilder/hundefutter-einzeln-unscharf.png) no-repeat;
+        background-size: contain;
     }
     
     .ikra4 {
-        width: 80px;
-        height: 68px;
-        left: 00%;
-        top: 30%;
+        display: none;
+    }
+
+
+
+    .ikra5 {
+        width: 60px;
+        height: 250px;
+        left: 95%;
+        top: 0%;
+        margin-top: 35%;
         animation: fadeInUpHuge 3.5s;
         animation-duration: 3s;
+        background: url(Bilder/hundefutter-einzeln-scharf-gespiegelt.png) no-repeat;
+        background-size: contain;
     }
+
+    .ikra6 {
+        display: none;
+    }
+
+
 
         /*Button testimonial */
 
@@ -1006,6 +1323,20 @@ footer {
             background-size: contain;
             background-position:center;
         }
+
+
+
+    .btn-kaufen-2 {
+        width: none;
+        border: 1px solid #02AEA8;
+    }
+    
+    
+    .btn-probierpaket {
+    margin-bottom: 0px;
+    width: 300px;
+    margin-right: 2%;
+    }
 
 
     /*Argumente*/
@@ -1095,6 +1426,42 @@ footer {
         line-height: 10em;
     }
 
+    /*Scrollsection*/
+    .scrollcontent h3 {
+        font-size: 60pt;
+        margin-top: 35%;
+    
+    }
+    
+    .scrollcontent li:nth-child(4) {
+        margin-bottom: 40%;
+    }
+    
+    
+    .img-1 {
+        width: 55%;
+        top: 30%;
+        right: -3000px; 
+    }
+    
+    .img-2 {
+        width:  55%;
+        top: 30%;
+        right: -3700px; 
+    }
+    
+    .img-3 {
+        width:  55%;
+        top: 30%;
+        right: -4400px; 
+    }
+    
+    .img-4 {
+        width:  55%;
+        top: 30%;
+        right: -5100px; 
+    }
+    
 
 
     /*Kaufangebot*/
@@ -1115,18 +1482,40 @@ footer {
     }
     .flex-container {
         height: 500px;
-       padding-left: 5%;
+       padding-left: 0%;
+       padding-right: 2%;
+       margin-left: -5%;
     }
 
 
     .preis-alt {
-        margin-top: 0%;
+        margin-top: 10%;
         margin-bottom: 0%;
     }    
 
     .div-button {
         padding-top: 5%;
     }
+
+    #stoerer {
+        margin-left: 2%;
+        margin-top: 0%;
+        width: 200px;
+        height: 50px;
+        -moz-border-radius: 350px / 200px;
+        -webkit-border-radius: 350px / 200px;
+        border-radius: 350px / 200px;
+        transform: rotate(-10deg);
+    }
+    
+    #stoerer p {
+        margin-top: 11%;
+        color: white;
+        font-weight: lighter;
+        font-size: 1.1em;
+        letter-spacing: 0.5pt;
+    }
+    
     
  
   
@@ -1161,20 +1550,21 @@ footer {
     grid-column: 1/4;
     text-align: center;
     transform: translateY(50%);
+    margin-right: 5%;
 }
 
 .testimonials img {
     grid-column: 4/9;
-    width: 90%;
+    width: 80%;
     z-index: 3;
     grid-row: 1;
-    transform: translateY(10%);
+    transform: translateY(25%);
 }
 .background {
     margin-top: -12%;
     padding-top: 18%;
     padding-right: 8%;
-    padding-left: 8%;
+    padding-left: 0%;
     padding-bottom: 3%;
     grid-column: 7/13;
     grid-row: 1;
@@ -1182,17 +1572,11 @@ footer {
 }
 
 .background div{
-   
-    margin-left: 30%;
- 
+    margin-left: 25%;
+    margin-top: -10px;
 
 }
 
-
-.btn-zentrieren {
-    margin-top: 15%;
-    margin-bottom: -10%;
-}
 
 /*Siegel*/
 
@@ -1241,6 +1625,60 @@ footer {
     margin-top: 1%;
 }
 
+/*Footer*/
+
+.footerstyle {
+    grid-column: 1/13;
+    margin-top: 30%;
+    position: relative;
+    text-align: center;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0,0,0, 100)
+      ),url(Bilder/chichaua.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px 8px 6px -0.5px rgb(255, 255, 255);
+    
+   
+}
+
+.footerpic {
+    width: 40%;
+    margin-top: -25%;
+    margin-left: 0%;
+    
+}
+
+#footerDeckel{
+    width: 40%;
+    margin-top: -35%;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+.deckelFadeIn {
+    transform: translate(0%);
+    animation: fadeInAndUp 3s;
+}
+
+
+.footerstyle ul {
+    left: 38%;
+}
+
+
+.footerstyle hr {
+        width: 40%;
+        height: 0.8px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5em;
+        background-color: #B3A992;
+        border: 0 none;
+        
+}
 
 
 }
@@ -1248,21 +1686,16 @@ footer {
 /*desktop styles*/
 @media screen and (min-width: 1200px) {
 
-    /*test*/ 
-
-    h1 {
-        color:red;
-    }
 
     #wrapper {
-        width: 80%;
+        width: 90%;
         margin: 0px auto;
     }
 
     /*Header*/
 
     .header-background img {
-        width: 30%;
+        width: 37%;
         left: 19.5%;
         top: 65%;
     }
@@ -1274,8 +1707,24 @@ footer {
         margin: 0 auto;
     }
 
+    .p1 {
+        letter-spacing: 0.7pt;
+        font-size: 2.5em;
+        text-align: center;
+        margin-left: 1.1%;
+        margin-right: 1.1%;
+    
+    }
+
+    .p2 {
+        font-size: 1.4em;
+        margin-bottom: 3%;
+        margin-top: 3%;
+        text-align: center;
+    }
+
     .header-background {
-        margin-top: 9%;
+        margin-top: 5%;
         
     }
 
@@ -1287,17 +1736,17 @@ footer {
 
     /*Fonts*/
 
-    h1 {
-        margin-top: 10%;
-    }
-    h1,h2 {
+    h1{
         font-family:'Playfair Display';
         text-align: center;
-        font-size: 4em;
+        font-size: 4.5em;
+        color:red !important;
+        margin-top: 10%;
       
     }
     
     h2 {
+        text-align: center;
         font-size: 2em;
         font-family: 'PlayfairDisplay-Regular';
         
@@ -1351,11 +1800,12 @@ footer {
     }
     
     .ikra4 {
+        display: block;
         width: 80px;
         height: 50px;
         left: 5%;
         top: 0%;
-        margin-top: 30%;
+        margin-top: 20%;
         animation: fadeInUpHuge 3.5s;
         animation-duration: 3s;
         background: url(Bilder/hundefutter-einzeln.hell.png) no-repeat;
@@ -1374,6 +1824,88 @@ footer {
         background: url(Bilder/hundefutter-einzeln-scharf-gespiegelt.png) no-repeat;
         background-size: contain;
     }
+    
+    .ikra6 {
+        display: none;
+    }
+
+    /*Scrollsection*/
+
+    
+    .scrollcontent h3 {
+
+        font-size: 80pt;
+     
+    
+    }
+    
+    .scrollcontent li:nth-child(4) {
+        margin-bottom: 45%;
+    }
+    
+    
+    .img-1 {
+        width:  50%;
+    
+    }
+    
+    .img-2 {
+        width:  50%;
+    }
+    
+    .img-3 {
+        width:  50%;
+    }
+    
+    .img-4 {
+        width:  50%;
+    }
+
+    /*Kaufangebot*/
+
+    .gewicht {
+        margin-bottom: 0%;
+    }
+
+    .buy img{
+        grid-column: 1/4;
+        width: 60% !important;
+        height: 500px;
+        object-fit: cover;
+        object-position: center;
+        display: flex;
+        float: left;
+        grid-row: 1;
+    }
+
+
+    .flex-container {
+        height: 500px;
+       padding-left: 5%;
+       padding-right: 2%;
+       margin-left: -5%;
+    }
+
+
+    .preis-alt {
+        margin-top: 10%;
+    }    
+
+
+    #stoerer {
+        margin-left: 5%;
+        margin-top: 0%;
+        width: 150px;
+        height: 50px;
+        -moz-border-radius: 500px / 270px;
+        -webkit-border-radius: 500px / 270px;
+        border-radius: 500px / 270px;
+    }
+    
+    #stoerer p {
+        margin-top: 12%;
+    }
+    
 
     /*Siegel*/
 
@@ -1384,7 +1916,90 @@ footer {
     .siegel p {
         font-size: 1.2em;
     }
-   
+
+    /*Testimonials*/
     
+    .btn-probierpaket {
+    margin-right: 5%;
+    }
+
+    .btn-testimonial {
+        padding: 0% 4% 0% 4%;
+        height: 15%;
+        position: relative;
+        overflow: hidden;
+        margin-top: 8%;
+        
+    }
+    
+    #button-left {
+        left: 45%;
+    }
+    
+    #button-right {
+        left: 55%;
+    }
+
+  
+    .background {
+        margin-top: -50px;
+    }
+    
+
+    /*Footer*/
+
+    .footerstyle {
+        grid-column: 1/13;
+        margin-top: 30%;
+        position: relative;
+        text-align: center;
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0),
+            rgba(0,0,0, 100)
+          ),url(Bilder/chichaua.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: inset 0px 8px 6px -0.5px rgb(255, 255, 255);
+        
+       
+    }
+    
+    .footerpic {
+        width: 35%;
+        margin-top: -25%;
+        margin-left: 0%;
+        
+    }
+    
+    #footerDeckel{
+        width: 35%;
+        margin-top: -32%;
+        margin-right: 20%;
+        margin-left: 20%;
+    }
+
+    
+    
+    .footerstyle ul {
+        font-size: 0.95em;
+        left: 40%;
+    }
+
+
+    
+    
+    .footerstyle hr {
+            width: 30%;
+            height: 0.8px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 5em;
+            background-color: #B3A992;
+            border: 0 none;
+            
+    }
+   
+
     
 }

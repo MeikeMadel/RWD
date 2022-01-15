@@ -13,11 +13,22 @@ var RWD;
         grafikgross.classList.add("aktiv");
         grafikklein.classList.remove("aktiv");
     }
+    let windowWidth = window.innerWidth;
+    let horizonzalLength = document.querySelector(".element-wrapper").scrollWidth;
+    let scrollheading = document.getElementById("scrollheading");
+    let distFromTop = scrollheading.getBoundingClientRect().top;
+    let scrollDistance = distFromTop + horizonzalLength - windowWidth;
+    console.log(scrollDistance);
+    let horizontalSection = document.getElementsByClassName("horizontal-section");
+    horizontalSection[0].style.height = `${horizonzalLength}px`;
+    window.onscroll = function () {
+        let scrollTop = window.pageYOffset;
+        console.log(scrollTop);
+    };
     let divAnimateLeft = document.getElementById("fadeInFirst");
     let divAnimateRight = document.getElementById("fadeInThird");
     let hideWhenBoxInView = new IntersectionObserver((entries) => {
         if (entries[0].intersectionRatio <= 0 === false) { // Wenn in viewport
-            console.log("Jetzt");
             divAnimateLeft.classList.add("fadeInLeft");
             divAnimateRight.classList.add("fadeInRight");
         }
@@ -121,72 +132,151 @@ var RWD;
             counter = 1;
         }
     }
-    let img1 = document.getElementsByClassName("img-1");
-    let img2 = document.getElementsByClassName("img-2");
-    let img3 = document.getElementsByClassName("img-3");
-    let img4 = document.getElementsByClassName("img-4");
-    let dogfood = document.getElementsByClassName("ikra1");
-    let dogfood2 = document.getElementsByClassName("ikra2");
-    let dogfood3 = document.getElementsByClassName("ikra3");
-    let dogfood4 = document.getElementsByClassName("ikra4");
-    let dogfood5 = document.getElementsByClassName("ikra5");
-    window.onscroll = () => {
-        let pos = window.scrollY * 3 - 2000;
-        img1[0].style.right = `${pos}px`;
-        let pos2 = window.scrollY * 3 - 2700;
-        img2[0].style.right = `${pos2}px`;
-        let pos3 = window.scrollY * 3 - 3400;
-        img3[0].style.right = `${pos3}px`;
-        let pos4 = window.scrollY * 3 - 4100;
-        img4[0].style.right = `${pos4}px`;
-        let posIkra = -window.scrollY / 1.25;
-        dogfood[0].style.top = `${posIkra}px`;
-        let posIkra2 = -window.scrollY / 1.5;
-        dogfood2[0].style.top = `${posIkra2}px`;
-        let posIkra3 = -window.scrollY / 1.25;
-        dogfood3[0].style.top = `${posIkra3}px`;
-    };
-    let query = window.matchMedia("(min-width: 1200px)");
-    window.addEventListener("resize", resizeWindow);
-    function resizeWindow(_event) {
-        if (query.matches) {
-            window.onscroll = () => {
-                let posIkra = -window.scrollY * 1.25;
-                dogfood[0].style.top = `${posIkra}px`;
-                let posIkra2 = -window.scrollY / 1.5;
-                dogfood2[0].style.top = `${posIkra2}px`;
-                let posIkra3 = -window.scrollY / 1.25;
-                dogfood3[0].style.top = `${posIkra3}px`;
-                let posIkra4 = -window.scrollY / 1.75;
-                dogfood4[0].style.top = `${posIkra4}px`;
-                let posIkra5 = -window.scrollY / 2;
-                dogfood5[0].style.top = `${posIkra5}px`;
-            };
+    /*
+      let img1 = document.getElementsByClassName("img-1") as HTMLCollectionOf<HTMLElement>;
+      let img2= document.getElementsByClassName("img-2") as HTMLCollectionOf<HTMLElement>;
+      let img3 = document.getElementsByClassName("img-3") as HTMLCollectionOf<HTMLElement>;
+      let img4 = document.getElementsByClassName("img-4") as HTMLCollectionOf<HTMLElement>;
+    
+      let dogfood: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("ikra1") as HTMLCollectionOf<HTMLElement>;
+      let dogfood2: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("ikra2") as HTMLCollectionOf<HTMLElement>;
+      let dogfood3: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("ikra3") as HTMLCollectionOf<HTMLElement>;
+      let dogfood4: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("ikra4") as HTMLCollectionOf<HTMLElement>;
+      let dogfood5: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("ikra5") as HTMLCollectionOf<HTMLElement>;
+      let dogfood6: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("ikra6") as HTMLCollectionOf<HTMLElement>;
+    
+    
+      let query0 = window.matchMedia("(max-width: 620px)");
+      let query620 = window.matchMedia("(min-width: 620px)");
+      let query960 = window.matchMedia("(min-width: 960px)");
+      let query1200 = window.matchMedia("(min-width: 1200px)");
+      
+      
+      window.onscroll = () => {
+    
+    
+        if (query0.matches) {
+          
+          let pos: number = window.scrollY * 2.5  - 2400;
+          img1[0].style.right =  `${pos}px`;
+          let pos2: number= window.scrollY * 2.5 - 3100;
+          img2[0].style.right =  `${pos2}px`;
+          let pos3: number = window.scrollY * 2.5 - 3800;
+          img3[0].style.right =  `${pos3}px`;
+          let pos4: number = window.scrollY * 2.5 - 4500;
+          img4[0].style.right =  `${pos4}px`;
+        
+      }
+        if (query620.matches) {
+          let pos: number = window.scrollY * 2.5  - 4000;
+          img1[0].style.right =  `${pos}px`;
+          let pos2: number= window.scrollY * 2.5 - 3700;
+          img2[0].style.right =  `${pos2}px`;
+          let pos3: number = window.scrollY * 2.5 - 4400;
+          img3[0].style.right =  `${pos3}px`;
+          let pos4: number = window.scrollY * 2.5 - 5200;
+          img4[0].style.right =  `${pos4}px`;
         }
-        return (query.matches);
-    }
-    if (resizeWindow && query.matches) {
+    
+        if (query960.matches) {
+          let pos: number = window.scrollY * 2.5  - 3000;
+          img1[0].style.right =  `${pos}px`;
+          let pos2: number= window.scrollY * 2.5 - 4000;
+          img2[0].style.right =  `${pos2}px`;
+          let pos3: number = window.scrollY * 2.5 - 5000;
+          img3[0].style.right =  `${pos3}px`;
+          let pos4: number = window.scrollY * 2.5 - 6200;
+          img4[0].style.right =  `${pos4}px`;
+        }
+    
+        if (query1200.matches) {
+          let pos: number = window.scrollY * 3  - 4000;
+          img1[0].style.right =  `${pos}px`;
+          let pos2: number = window.scrollY * 3 - 5500;
+          img2[0].style.right =  `${pos2}px`;
+          let pos3: number = window.scrollY * 3 - 7000;
+          img3[0].style.right =  `${pos3}px`;
+          let pos4: number = window.scrollY * 3 - 8200;
+          img4[0].style.right =  `${pos4}px`;
+        }
+    
+    
+        let posIkra: number = -window.scrollY / 4;
+        dogfood[0].style.top =  `${posIkra}px`;
+        let posIkra2: number = -window.scrollY / 1.5;
+        dogfood2[0].style.top =  `${posIkra2}px`;
+        let posIkra3: number = -window.scrollY / 2;
+        dogfood3[0].style.top =  `${posIkra3}px`;
+        let posIkra4: number = -window.scrollY / 1.75;
+        dogfood4[0].style.top =  `${posIkra4}px`;
+        let posIkra5: number = -window.scrollY / 2;
+        dogfood5[0].style.top =  `${posIkra5}px`;
+        let posIkra6: number = -window.scrollY / 1.75;
+        dogfood6[0].style.top =  `${posIkra6}px`;
+    
+      };
+    
+    
+     
+      
+      window.addEventListener("resize", resizeWindow);
+    
+      function resizeWindow (_event: Event): boolean {
+        if (query1200.matches) {
+          
+          window.onscroll = () => {
+          let posIkra: number = -window.scrollY * 1.25;
+          dogfood[0].style.top =  `${posIkra}px`;
+          let posIkra2: number = -window.scrollY / 1.5;
+          dogfood2[0].style.top =  `${posIkra2}px`;
+          let posIkra3: number = -window.scrollY / 1.25;
+          dogfood3[0].style.top =  `${posIkra3}px`;
+          let posIkra4: number = -window.scrollY / 1.75;
+          dogfood4[0].style.top =  `${posIkra4}px`;
+          let posIkra5: number = -window.scrollY / 2;
+          dogfood5[0].style.top =  `${posIkra5}px`;
+          };
+        }
+        return(query1200.matches);
+      }
+    
+      
+      if (resizeWindow && query1200.matches) {
         window.onscroll = () => {
-            let posIkra = -window.scrollY / 1.25;
-            dogfood[0].style.top = `${posIkra}px`;
-            let posIkra2 = -window.scrollY / 1.5;
-            dogfood2[0].style.top = `${posIkra2}px`;
-            let posIkra3 = -window.scrollY / 1.25;
-            dogfood3[0].style.top = `${posIkra3}px`;
-            let posIkra4 = -window.scrollY / 1.75;
-            dogfood4[0].style.top = `${posIkra4}px`;
-            let posIkra5 = -window.scrollY / 2;
-            dogfood5[0].style.top = `${posIkra5}px`;
-            let pos = window.scrollY * 3 - 2000;
-            img1[0].style.right = `${pos}px`;
-            let pos2 = window.scrollY * 3 - 2700;
-            img2[0].style.right = `${pos2}px`;
-            let pos3 = window.scrollY * 3 - 3400;
-            img3[0].style.right = `${pos3}px`;
-            let pos4 = window.scrollY * 3 - 4100;
-            img4[0].style.right = `${pos4}px`;
-        };
-    }
+          let posIkra: number = -window.scrollY / 1.25;
+          dogfood[0].style.top =  `${posIkra}px`;
+          let posIkra2: number = -window.scrollY / 1.5;
+          dogfood2[0].style.top =  `${posIkra2}px`;
+          let posIkra3: number = -window.scrollY / 1.25;
+          dogfood3[0].style.top =  `${posIkra3}px`;
+          let posIkra4: number = -window.scrollY / 1.75;
+          dogfood4[0].style.top =  `${posIkra4}px`;
+          let posIkra5: number = -window.scrollY / 2;
+          dogfood5[0].style.top =  `${posIkra5}px`;
+    
+          let pos: number = window.scrollY * 3  - 4000;
+          img1[0].style.right =  `${pos}px`;
+          let pos2: number = window.scrollY * 3 - 5500;
+          img2[0].style.right =  `${pos2}px`;
+          let pos3: number = window.scrollY * 3 - 7000;
+          img3[0].style.right =  `${pos3}px`;
+          let pos4: number = window.scrollY * 3 - 8200;
+          img4[0].style.right =  `${pos4}px`;
+          
+          };
+        }
+    
+      
+      
+    
+    /*Footer*/
+    let footerDeckel = document.getElementById("footerDeckel");
+    let fadeDeckelWhenInView = new IntersectionObserver((entries) => {
+        if (entries[0].intersectionRatio <= 0 === false) { // Wenn in viewport
+            footerDeckel.classList.add("deckelFadeIn");
+        }
+    });
+    fadeDeckelWhenInView.observe(footerDeckel);
     /*
      window.addEventListener("scroll", handleEvent);
       window.addEventListener("load", handleEvent);
