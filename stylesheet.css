@@ -19,7 +19,7 @@ body {
 
 body, html {
     width: 100%;
-    height: 800vh;
+    height: 500vh;
 }
 
 
@@ -36,32 +36,6 @@ body, html {
     src: url('Bilder/Fonts/Playfair_Display/Playfair_Display/static/PlayfairDisplay-Regular.ttf');
 }
 
-/*test*/
-
-.horizontal-section {
-    padding: 100px 0;
-    background-color: pink;
-}
-
-.sticky-wrapper {
-    width: 100%;
-    overflow: hidden;
-    position: sticky;
-    top: 100px;
-}
-
-.element {
-    width: 500px;
-    height: 400px;
-    background-color: purple;
-    margin: 0 20px 0 0;
-    flex-shrink: 0;
-}
-
-.element-wrapper {
-    position: relative;
-    display: flex;
-}
 
 
 /*headings*/
@@ -524,66 +498,80 @@ to{
     }
 }
 
-
-
 /*Scrollsection*/
 
 #scrollheading {
     text-align: center;
 }
 
-.scrollcontent h3 {
+.horizontal-section {
+    padding: 100px 0;
+    
+}
+
+.sticky-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: sticky;
+    top: 100px;
+    margin-top: -1700px;
+}
+
+.element {
+    width: 500px;
+    height: 400px;
+    margin: 0 20px 0 0;
+
+    flex-shrink: 0;
+}
+.horizontal-section li:nth-child(1) {
+    margin-top: 40%;
+}
+.horizontal-section li:nth-child(2) {
+    margin-top: 60%;
+}
+.horizontal-section li:nth-child(3) {
+    margin-top: 60%;
+}
+.horizontal-section li:nth-child(4) {
+    margin-top: 60%;
+}
+.horizontal-section h3 {
     font-family: 'Playfair Display';
     font-size: 40pt;
     color: #e4e3e3;
     font-weight: bold;
-    margin-top: 40%;
     text-align: center;
-
 }
 
-.scrollcontent li:nth-child(4) {
-    margin-bottom: 50%;
+.element-wrapper {
+    position: relative;
+    display: flex;
+}
+
+.lachs {
+    margin-top: 20%;
+    margin-left: 10%;
+    width: 100%;
+}
+
+.kartoffel {
+    margin-top: 10%;
+    margin-left: 40%;
+    width: 90%;
+}
+
+.karotte {
+    margin-top: 5%;
+    width: 90%;
+}
+
+.oel {
+    margin-top: 0%;
+    width: 90%;
 }
 
 
-.img-1 {
-    width:  80%;
-    position: fixed;
-    display: block;
-    top: 55%;
-    right: -2000px; 
-    white-space: nowrap;
-    opacity: 0.8;
-}
-
-.img-2 {
-    width:  80%;
-    position: fixed;
-    display: block;
-    top: 55%;
-    right: -2700px; 
-    white-space: nowrap;
-    opacity: 0.7;
-}
-
-.img-3 {
-    width:  80%;
-    position: fixed;
-    top: 55%;
-    right: -3400px; 
-    white-space: nowrap;
-    opacity: 0.7;
-}
-
-.img-4 {
-    width:  70%;
-    position: fixed;
-    top: 55%;
-    right: -4100px; 
-    white-space: nowrap;
-    opacity: 0.7;
-}
 
 
 /*Kaufangebot*/
@@ -867,7 +855,9 @@ to{
 
 /*Footer*/ 
 
-
+.sectionFooter {
+    grid-column: 1/13;
+}
 
 .footerstyle {
     grid-column: 1/13;
@@ -913,8 +903,7 @@ to{
     display: flex;
     margin-top: 5em;
     margin-bottom: 4em;
-    position: relative;
-    left: 28%;
+    margin-left: 40%
 
   
 }
@@ -1006,42 +995,67 @@ to{
 
     /*Scrollsection*/
 
-    
-    .scrollcontent h3 {
-        font-size: 50pt;
-        margin-top: 35%;
-    
-    }
-    
-    .scrollcontent li:nth-child(4) {
-        margin-bottom: 40%;
-    }
-    
-    
-    .img-1 {
-        width: 60%;
-        top: 30%;
-        right: -3000px; 
-    }
-    
-    .img-2 {
-        width:  60%;
-        top: 30%;
-        right: -3700px; 
-    }
-    
-    .img-3 {
-        width:  60%;
-        top: 30%;
-        right: -4400px; 
-    }
-    
-    .img-4 {
-        width:  50%;
-        top: 30%;
-        right: -5100px; 
-    }
-    
+.sticky-wrapper {
+    margin-top: -2000px;
+}
+
+.element {
+    width: 500px;
+    height: 700px;
+    margin: 0 20px 0 0;
+
+    flex-shrink: 0;
+}
+.horizontal-section li:nth-child(1) {
+    margin-top: 40%;
+}
+.horizontal-section li:nth-child(2) {
+    margin-top: 60%;
+}
+.horizontal-section li:nth-child(3) {
+    margin-top: 60%;
+}
+.horizontal-section li:nth-child(4) {
+    margin-top: 60%;
+}
+.horizontal-section h3 {
+    font-family: 'Playfair Display';
+    font-size: 40pt;
+    color: #e4e3e3;
+    font-weight: bold;
+    text-align: center;
+}
+
+.element-wrapper {
+    position: relative;
+    display: flex;
+}
+
+.lachs {
+    margin-top: 25%;
+    margin-left: 20%;
+    width: 100%;
+}
+
+.kartoffel {
+    margin-top: 25%;
+    margin-left: 40%;
+    width: 90%;
+}
+
+.karotte {
+    margin-left: 20%;
+
+    margin-top: 5%;
+    width: 90%;
+}
+
+.oel {
+    margin-left: -12%;
+    margin-top: 0%;
+    width: 90%;
+}
+
 
     
 
@@ -1152,7 +1166,7 @@ to{
     
     
     .footerstyle ul {
-        left: 30%;
+        margin-left: 30%;
     }
     
     
@@ -1427,42 +1441,59 @@ to{
     }
 
     /*Scrollsection*/
-    .scrollcontent h3 {
-        font-size: 60pt;
-        margin-top: 35%;
-    
-    }
-    
-    .scrollcontent li:nth-child(4) {
-        margin-bottom: 40%;
-    }
-    
-    
-    .img-1 {
-        width: 55%;
-        top: 30%;
-        right: -3000px; 
-    }
-    
-    .img-2 {
-        width:  55%;
-        top: 30%;
-        right: -3700px; 
-    }
-    
-    .img-3 {
-        width:  55%;
-        top: 30%;
-        right: -4400px; 
-    }
-    
-    .img-4 {
-        width:  55%;
-        top: 30%;
-        right: -5100px; 
-    }
-    
 
+    .horizontal-section {
+        padding: 100px;
+    }
+
+  .horizontal-section h3 {
+      display: none;
+  }
+
+.sticky-wrapper {
+    margin-top: -500px;
+
+    
+}
+
+.element {
+    width: 500px;
+    height: 400px;
+    margin: 0 0px 0 0;
+    flex-shrink: 0;
+}
+
+
+.element-wrapper {
+    position: relative;
+    display: flex;
+}
+
+.lachs {
+    margin-top: 5%;
+    margin-left: 0%;
+    width: 100%;
+}
+
+.kartoffel {
+    margin-top: 25%;
+    margin-left: 40%;
+    width: 90%;
+}
+
+.karotte {
+    margin-left: 20%;
+
+    margin-top: 5%;
+    width: 90%;
+}
+
+.oel {
+    margin-left: 0%;
+    padding-right: 50%;
+    margin-top: 0%;
+    width: 90%;
+}
 
     /*Kaufangebot*/
     .buy {
@@ -1665,7 +1696,7 @@ to{
 
 
 .footerstyle ul {
-    left: 38%;
+    margin-left: 38%;
 }
 
 
@@ -1829,37 +1860,88 @@ to{
         display: none;
     }
 
+
     /*Scrollsection*/
 
-    
-    .scrollcontent h3 {
+    .horizontal-section h3 {
+        display: block;
+    }
 
-        font-size: 80pt;
-     
+    .horizontal-section li:nth-child(1) {
+        margin-top: -10%;
+    }
+    .horizontal-section li:nth-child(2) {
+        margin-top: 45%;
+    }
+    .horizontal-section li:nth-child(3) {
+        margin-top: 45%;
+    }
+    .horizontal-section li:nth-child(4) {
+        margin-top: 45%;
+    }
+    .horizontal-section h3 {
+        font-size: 70pt;
+        color: #e4e3e3;
     
     }
-    
-    .scrollcontent li:nth-child(4) {
-        margin-bottom: 45%;
+    #scrollheading {
+        text-align: center;
     }
     
-    
-    .img-1 {
-        width:  50%;
-    
+    .horizontal-section {
+        padding: 400px 0;
+        
     }
     
-    .img-2 {
-        width:  50%;
+    .sticky-wrapper {
+        width: 100%;
+        overflow: hidden;
+        position: sticky;
+        top: 100px;
+        margin-top: -3200px;
     }
     
-    .img-3 {
-        width:  50%;
+    .element {
+        width: 500px;
+        height: 400px;
+        margin: 0 20px 0 0;
+    
+        flex-shrink: 0;
+    }
+
+   
+    
+    .element-wrapper {
+        position: relative;
+        display: flex;
     }
     
-    .img-4 {
-        width:  50%;
+    .lachs {
+        margin-top: 20%;
+        margin-left: 20%;
+        width: 100%;
     }
+    
+    .kartoffel {
+        margin-top: 10%;
+        margin-left: 40%;
+        width: 90%;
+    }
+    
+    .karotte {
+        margin-top: 5%;
+        margin-left: -10%;
+
+        width: 90%;
+    }
+    
+    .oel {
+        margin-top: 0%;
+        margin-left: -50%;
+
+        width: 90%;
+    }
+    
 
     /*Kaufangebot*/
 
@@ -1983,7 +2065,7 @@ to{
     
     .footerstyle ul {
         font-size: 0.95em;
-        left: 40%;
+        margin-left: 40%;
     }
 
 

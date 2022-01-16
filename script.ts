@@ -19,28 +19,55 @@ namespace RWD {
     grafikgross.classList.add("aktiv");
     grafikklein.classList.remove("aktiv");
   }
+
+  /*Hundefutter*/
+
+  let dogfood: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("ikra1") as HTMLCollectionOf<HTMLElement>;
+  let dogfood2: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("ikra2") as HTMLCollectionOf<HTMLElement>;
+  let dogfood3: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("ikra3") as HTMLCollectionOf<HTMLElement>;
+  let dogfood4: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("ikra4") as HTMLCollectionOf<HTMLElement>;
+  let dogfood5: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("ikra5") as HTMLCollectionOf<HTMLElement>;
+  let dogfood6: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("ikra6") as HTMLCollectionOf<HTMLElement>;
+
+
+  /*Scrollsection*/
   
+  let horizontalSection1 = document.getElementById("horizontalSection1");
   let windowWidth = window.innerWidth;
   let horizonzalLength =
   document.querySelector(".element-wrapper").scrollWidth;
 
-  let scrollheading = document.getElementById("scrollheading");
-
-  let distFromTop = scrollheading.getBoundingClientRect().top;
+  let distFromTop = horizontalSection1.getBoundingClientRect().top;
 
   let scrollDistance = distFromTop + horizonzalLength - windowWidth;
 
   console.log(scrollDistance);
 
   let horizontalSection = document.getElementsByClassName("horizontal-section") as HTMLCollectionOf<HTMLElement>;
+  let elementWrapper = document.getElementsByClassName("element-wrapper") as HTMLCollectionOf<HTMLElement>;
 
   horizontalSection[0].style.height =  `${horizonzalLength}px`;
 
   window.onscroll = function () {
     let scrollTop = window.pageYOffset;
 
-    console.log(scrollTop);
-  }
+    if (scrollTop >= distFromTop && scrollTop <= scrollDistance) {
+      elementWrapper[0].style.transform = "translateX(-" + (scrollTop - distFromTop) + "px)";
+    }
+
+    let posIkra: number = -window.scrollY / 4;
+    dogfood[0].style.top =  `${posIkra}px`;
+    let posIkra2: number = -window.scrollY / 1.5;
+    dogfood2[0].style.top =  `${posIkra2}px`;
+    let posIkra3: number = -window.scrollY / 2;
+    dogfood3[0].style.top =  `${posIkra3}px`;
+    let posIkra4: number = -window.scrollY / 1.75;
+    dogfood4[0].style.top =  `${posIkra4}px`;
+    let posIkra5: number = -window.scrollY / 2;
+    dogfood5[0].style.top =  `${posIkra5}px`;
+    let posIkra6: number = -window.scrollY / 1.75;
+    dogfood6[0].style.top =  `${posIkra6}px`;
+  };
   
 
 
@@ -179,13 +206,6 @@ namespace RWD {
   let img3 = document.getElementsByClassName("img-3") as HTMLCollectionOf<HTMLElement>;
   let img4 = document.getElementsByClassName("img-4") as HTMLCollectionOf<HTMLElement>;
 
-  let dogfood: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("ikra1") as HTMLCollectionOf<HTMLElement>;
-  let dogfood2: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("ikra2") as HTMLCollectionOf<HTMLElement>;
-  let dogfood3: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("ikra3") as HTMLCollectionOf<HTMLElement>;
-  let dogfood4: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("ikra4") as HTMLCollectionOf<HTMLElement>;
-  let dogfood5: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("ikra5") as HTMLCollectionOf<HTMLElement>;
-  let dogfood6: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("ikra6") as HTMLCollectionOf<HTMLElement>;
-
 
   let query0 = window.matchMedia("(max-width: 620px)");
   let query620 = window.matchMedia("(min-width: 620px)");
@@ -240,21 +260,6 @@ namespace RWD {
       let pos4: number = window.scrollY * 3 - 8200;
       img4[0].style.right =  `${pos4}px`;
     }
-
-
-    let posIkra: number = -window.scrollY / 4;
-    dogfood[0].style.top =  `${posIkra}px`;
-    let posIkra2: number = -window.scrollY / 1.5;
-    dogfood2[0].style.top =  `${posIkra2}px`;
-    let posIkra3: number = -window.scrollY / 2;
-    dogfood3[0].style.top =  `${posIkra3}px`;
-    let posIkra4: number = -window.scrollY / 1.75;
-    dogfood4[0].style.top =  `${posIkra4}px`;
-    let posIkra5: number = -window.scrollY / 2;
-    dogfood5[0].style.top =  `${posIkra5}px`;
-    let posIkra6: number = -window.scrollY / 1.75;
-    dogfood6[0].style.top =  `${posIkra6}px`;
-
   };
 
 
