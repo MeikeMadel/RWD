@@ -26,7 +26,6 @@ var RWD;
     let horizonzalLength = document.querySelector(".element-wrapper").scrollWidth;
     let distFromTop = horizontalSection1.getBoundingClientRect().top;
     let scrollDistance = distFromTop + horizonzalLength - windowWidth;
-    console.log(scrollDistance);
     let horizontalSection = document.getElementsByClassName("horizontal-section");
     let elementWrapper = document.getElementsByClassName("element-wrapper");
     horizontalSection[0].style.height = `${horizonzalLength}px`;
@@ -48,6 +47,49 @@ var RWD;
         let posIkra6 = -window.scrollY / 1.75;
         dogfood6[0].style.top = `${posIkra6}px`;
     };
+    let imgScroll = document.getElementById("FadeLachs");
+    let imgScroll2 = document.getElementById("FadeKartoffel");
+    let imgScroll3 = document.getElementById("FadeKarotte");
+    let imgScroll4 = document.getElementById("FadeOel");
+    let fadeInView = new IntersectionObserver((entries) => {
+        if (entries[0].intersectionRatio <= 0 === false) { // Wenn in viewport
+            imgScroll.classList.add("scrollFadeIn");
+            imgScroll2.classList.add("scrollFadeIn2");
+            imgScroll3.classList.add("scrollFadeIn3");
+            imgScroll4.classList.add("scrollFadeIn4");
+        }
+    });
+    fadeInView.observe(imgScroll);
+    fadeInView.observe(imgScroll3);
+    fadeInView.observe(imgScroll4);
+    fadeInView.observe(imgScroll4);
+    let buyImg = document.getElementById("buyImg");
+    let stoerer = document.getElementById("stoerer");
+    let angebotFade = document.getElementById("angebotFade");
+    let gesundheitImg = document.getElementById("gesunfheit-img");
+    let siegelFade = document.getElementById("siegelFade");
+    let fadeIn = new IntersectionObserver((entries) => {
+        if (entries[0].intersectionRatio <= 0 === false) { // Wenn in viewport
+            buyImg.classList.add("fadeInLeft");
+            angebotFade.classList.add("fadeInRight");
+            stoerer.classList.add("stoererFade");
+        }
+    });
+    let fadeGesundheit = new IntersectionObserver((entries) => {
+        if (entries[0].intersectionRatio <= 0 === false) { // Wenn in viewport
+            gesundheitImg.classList.add("fadeInRight");
+        }
+    });
+    let fadeInSiegel = new IntersectionObserver((entries) => {
+        if (entries[0].intersectionRatio <= 0 === false) { // Wenn in viewport
+            siegelFade.classList.add("fadeUpSiegel");
+        }
+    });
+    fadeIn.observe(buyImg);
+    fadeIn.observe(stoerer);
+    fadeIn.observe(angebotFade);
+    fadeGesundheit.observe(gesundheitImg);
+    fadeInSiegel.observe(siegelFade);
     let divAnimateLeft = document.getElementById("fadeInFirst");
     let divAnimateRight = document.getElementById("fadeInThird");
     let hideWhenBoxInView = new IntersectionObserver((entries) => {
@@ -86,7 +128,6 @@ var RWD;
     let text2 = document.getElementById("text2");
     let text3 = document.getElementById("text3");
     let counter = 1;
-    console.log(counter);
     function slideLeft(_event) {
         counter--;
         if (counter == 0) {

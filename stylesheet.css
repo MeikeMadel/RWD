@@ -226,6 +226,11 @@ height: 50em;
 }
 
 /*header*/
+
+.caspian-logo {
+    width: 20%;
+}
+
 .p1 {
     color: #B3A992;
     font-family: 'Playfair Display Regular';
@@ -253,11 +258,11 @@ height: 50em;
     margin-top: 4%;
     margin-left: 2%;
     margin-right: 2%;
-    height: 60%;
+    height: 67%;
     background: url(Bilder/hund-meer.mp4);
     background-repeat: no-repeat;
     color: white;
-    padding-top: 10%;
+    padding-top: 5%;
     position: relative;
     background-size: cover;
     position: top;
@@ -267,8 +272,8 @@ height: 50em;
 }
 
 
-.header-background img {
-    width: 50%;
+.header-dose {
+    width: 55%;
     transform: translate(0%);
     animation: fadeInAndUp 2s;
 }
@@ -288,43 +293,13 @@ to{
 
 
 
-/*Linien
-.line {
-    border-left: 1px solid #B3A992;
-    height: 10%;
-    position: absolute;
-    left: 50%;
-    top: 28%;
-
-}
-
-.line2 {
-    display: inline;
-    border-left: 1px solid #B3A992;
-    height: 4%;
-    position: absolute;
-    left: 50%;
-    top: 62.5%;
-
-}
-
-
-.line3 {
-    display: inline;
-    border-left: 1px solid #B3A992;
-    height: 4%;
-    position: absolute;
-    left: 50%;
-    top: 100%;
-
-}
-*/
-
-
 /*Hundefutter-Hintergrund*/
 
 
-
+.fadeUpSiegel {
+    animation: fadeInUpHuge 1s;
+    animation-duration: 1s;
+}
 
 @keyframes fadeInUpHuge {
     from {
@@ -395,7 +370,7 @@ to{
 
 /*Einführung*/
 
-.headerFadeIn, .firstTextFadeIn, .scrollHeadingAnimation {
+.headerFadeIn, .firstTextFadeIn, .scrollHeadingAnimation, .stoererFade {
     animation: fadeIn 3s;
 }
 #secondHeading {
@@ -498,7 +473,11 @@ to{
     }
 }
 
-/*Scrollsection*/
+/*Scrollsection alt*/
+
+.zusatz, .zusatz5, .zusatz1 {
+    display: none;
+}
 
 #scrollheading {
     text-align: center;
@@ -514,7 +493,7 @@ to{
     overflow: hidden;
     position: sticky;
     top: 100px;
-    margin-top: -1700px;
+    margin-top: -1450px;
 }
 
 .element {
@@ -528,13 +507,13 @@ to{
     margin-top: 40%;
 }
 .horizontal-section li:nth-child(2) {
-    margin-top: 60%;
+    margin-top: 80%;
 }
 .horizontal-section li:nth-child(3) {
-    margin-top: 60%;
+    margin-top: 80%;
 }
 .horizontal-section li:nth-child(4) {
-    margin-top: 60%;
+    margin-top: 80%;
 }
 .horizontal-section h3 {
     font-family: 'Playfair Display';
@@ -542,6 +521,10 @@ to{
     color: #e4e3e3;
     font-weight: bold;
     text-align: center;
+}
+
+.element h3 {
+    display: none;
 }
 
 .element-wrapper {
@@ -552,23 +535,24 @@ to{
 .lachs {
     margin-top: 20%;
     margin-left: 10%;
-    width: 100%;
+    width: 70%;
 }
 
 .kartoffel {
     margin-top: 10%;
     margin-left: 40%;
-    width: 90%;
+    width: 60%;
 }
 
 .karotte {
     margin-top: 5%;
-    width: 90%;
+    width: 60%;
 }
 
 .oel {
-    margin-top: 0%;
-    width: 90%;
+    margin-top: -10%;
+    margin-left: -20%;
+    width: 60%;
 }
 
 
@@ -868,7 +852,7 @@ to{
         to bottom,
         rgba(0, 0, 0, 0),
         rgba(0,0,0, 100)
-      ),url(Bilder/chichaua.jpg);
+      ),url(Bilder/Waves.mp4);
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: inset 0px 8px 6px -0.5px rgb(255, 255, 255);
@@ -940,7 +924,6 @@ to{
 
      /*test*/
      h1 {
-         color: blue;
          font-size: 2.8em;
      }
 
@@ -948,19 +931,29 @@ to{
 
     
     /*Header*/
+
+    .caspian-logo {
+        width: 15%;
+    }
     
     .header-background {
-        height: 57%;
+        padding-top: 0%;
+        height: 67%;
     }
 
-    .header-background img {
+    .header-dose {
         width: 47%;
+        margin-bottom: 0px;
     }
 
-
-    .logo {
-        width: 50px;
+    #secondHeading {
+        margin-top: -50px;
     }
+
+ 
+    
+
+    
    
 
     
@@ -995,15 +988,30 @@ to{
 
     /*Scrollsection*/
 
+    .zusatz5 {
+        display: block;
+    }
+
+    .horizontal-section li {
+        display: none;
+    }
+    .horizontal-section {
+        margin-top: 10%;
+    }
+
+
 .sticky-wrapper {
-    margin-top: -2000px;
+    margin-top: 0px;
+}
+
+.element h3 {
+    display: block;
 }
 
 .element {
     width: 500px;
     height: 700px;
     margin: 0 20px 0 0;
-
     flex-shrink: 0;
 }
 .horizontal-section li:nth-child(1) {
@@ -1031,29 +1039,86 @@ to{
     display: flex;
 }
 
+.element h3 {
+    font-size: 50pt;
+}
+
+
+.h3-lachs {
+    margin-left: 30%;
+}
+
+
 .lachs {
-    margin-top: 25%;
+    margin-top: 0%;
     margin-left: 20%;
     width: 100%;
 }
 
+.h3-kartoffel {
+    margin-left: 40%;
+}
+
 .kartoffel {
-    margin-top: 25%;
+    margin-top: 0%;
     margin-left: 40%;
     width: 90%;
 }
 
-.karotte {
-    margin-left: 20%;
+.h3-karotte {
+    margin-left: 60%;
+}
 
-    margin-top: 5%;
+
+.karotte {
+    margin-left: 40%;
+    margin-top: 0%;
     width: 90%;
 }
 
+.h3-oel {
+    margin-left: 60%;
+    margin-top: -10%;
+}
+
+
 .oel {
-    margin-left: -12%;
+    margin-left: 40%;
     margin-top: 0%;
     width: 90%;
+}
+
+/*Scroll Landscape  */
+
+
+.h3-none {
+display: none;
+}
+
+
+.lachs-alt {
+margin-top: 0%;
+margin-left: 20%;
+width: 80%;
+}
+
+
+.kartoffel-alt {
+margin-top: 0%;
+margin-left: 40%;
+width: 70%;
+}
+
+.karotte-alt {
+margin-left: 40%;
+margin-top: 0%;
+width: 70%;
+}
+
+.oel-alt {
+margin-left: 40%;
+margin-top: -5%;
+width: 65%;
 }
 
 
@@ -1076,6 +1141,7 @@ to{
         text-align: center;
         font-size: 0.8em;
         margin-bottom: 10%;
+        margin-left: 50px;
     }
     .siegel div:nth-child(1) p{
         margin-top: 1%;
@@ -1086,7 +1152,7 @@ to{
         grid-column: 5/6;
         text-align: center;
         font-size: 0.8em;
-    
+        margin-left: 0px;
         margin-bottom: 10%;
     }
     .siegel div:nth-child(2) p{
@@ -1098,6 +1164,7 @@ to{
         grid-row: 1;
         text-align: center;
         font-size: 0.8em;
+        margin-right: 0px;
       
     }
     .siegel div:nth-child(3) p{
@@ -1136,11 +1203,7 @@ to{
         margin-top: 30%;
         position: relative;
         text-align: center;
-        background: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0),
-            rgba(0,0,0, 100)
-          ),url(Bilder/chichaua.jpg);
+      
         background-repeat: no-repeat;
         background-size: cover;
         box-shadow: inset 0px 8px 6px -0.5px rgb(255, 255, 255);
@@ -1191,7 +1254,6 @@ to{
     
 
     h1 {
-        color: pink;
         font-size: 4em;
     }
 
@@ -1209,7 +1271,7 @@ to{
         color: #fff;
         text-transform: uppercase;
         font-size: 1.2em;
-        margin-bottom: 3%;
+        margin-bottom: 0%;
         margin-top: 3%;
         text-align: center;
     }
@@ -1221,24 +1283,28 @@ to{
     }
 
     .header-background {
-        height: 60%;
+        padding-top: 0%;
+        height: 70%;
         margin-left: 4%;
         margin-right: 4%;
     }
 
-    .header-background img {
+    .header-dose{
         width: 40%;
+    }
+
+    .caspian-logo {
+        width: 14%;
+    }
+    
+
+    #secondHeading {
+        margin-top: -50px;
     }
 
     #wrapper {
         width: 100%;
         margin: 0px auto;
-    }
-
-
-    .logo {
-        width: 50px;
-        left: 50%;
     }
 
     /*button*/ 
@@ -1441,59 +1507,10 @@ to{
     }
 
     /*Scrollsection*/
-
-    .horizontal-section {
-        padding: 100px;
+    .zusatz1, .zusatz5 {
+        display: block;
     }
 
-  .horizontal-section h3 {
-      display: none;
-  }
-
-.sticky-wrapper {
-    margin-top: -500px;
-
-    
-}
-
-.element {
-    width: 500px;
-    height: 400px;
-    margin: 0 0px 0 0;
-    flex-shrink: 0;
-}
-
-
-.element-wrapper {
-    position: relative;
-    display: flex;
-}
-
-.lachs {
-    margin-top: 5%;
-    margin-left: 0%;
-    width: 100%;
-}
-
-.kartoffel {
-    margin-top: 25%;
-    margin-left: 40%;
-    width: 90%;
-}
-
-.karotte {
-    margin-left: 20%;
-
-    margin-top: 5%;
-    width: 90%;
-}
-
-.oel {
-    margin-left: 0%;
-    padding-right: 50%;
-    margin-top: 0%;
-    width: 90%;
-}
 
     /*Kaufangebot*/
     .buy {
@@ -1547,7 +1564,7 @@ to{
         letter-spacing: 0.5pt;
     }
     
-    
+
  
   
 
@@ -1568,6 +1585,14 @@ to{
     width: 80%;
     margin: 0 auto;
 }
+
+   /*Siegel*/
+
+   .siegel div:nth-child(1) {
+    margin-left: 0px;
+}
+
+
 
     /*Testimonials*/
 
@@ -1663,11 +1688,6 @@ to{
     margin-top: 30%;
     position: relative;
     text-align: center;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0),
-        rgba(0,0,0, 100)
-      ),url(Bilder/chichaua.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: inset 0px 8px 6px -0.5px rgb(255, 255, 255);
@@ -1725,7 +1745,8 @@ to{
 
     /*Header*/
 
-    .header-background img {
+  
+    .header-dose {
         width: 37%;
         left: 19.5%;
         top: 65%;
@@ -1755,15 +1776,16 @@ to{
     }
 
     .header-background {
+     
         margin-top: 5%;
+
         
     }
 
-    .logo {
-        width: 50px;
-        margin-top: 2%;
-        left: 50%;
+    .caspian-logo {
+        width: 14%;
     }
+
 
     /*Fonts*/
 
@@ -1771,7 +1793,6 @@ to{
         font-family:'Playfair Display';
         text-align: center;
         font-size: 4.5em;
-        color:red !important;
         margin-top: 10%;
       
     }
@@ -1863,84 +1884,46 @@ to{
 
     /*Scrollsection*/
 
-    .horizontal-section h3 {
-        display: block;
+    .scrollFadeIn {
+        animation: fadeInAndUp 4s;
+        animation-delay: 0s;
     }
 
-    .horizontal-section li:nth-child(1) {
-        margin-top: -10%;
-    }
-    .horizontal-section li:nth-child(2) {
-        margin-top: 45%;
-    }
-    .horizontal-section li:nth-child(3) {
-        margin-top: 45%;
-    }
-    .horizontal-section li:nth-child(4) {
-        margin-top: 45%;
-    }
-    .horizontal-section h3 {
-        font-size: 70pt;
-        color: #e4e3e3;
-    
-    }
-    #scrollheading {
-        text-align: center;
-    }
-    
-    .horizontal-section {
-        padding: 400px 0;
-        
-    }
-    
-    .sticky-wrapper {
-        width: 100%;
-        overflow: hidden;
-        position: sticky;
-        top: 100px;
-        margin-top: -3200px;
-    }
-    
-    .element {
-        width: 500px;
-        height: 400px;
-        margin: 0 20px 0 0;
-    
-        flex-shrink: 0;
+    .scrollFadeIn2 {
+        transform: translate(0%);
+        animation: fadeInAndUp 4s;
+       
+
     }
 
+    .scrollFadeIn3 {
+        transform: translate(0%);
+        animation: fadeInAndUp 4s;
    
-    
-    .element-wrapper {
-        position: relative;
-        display: flex;
-    }
-    
-    .lachs {
-        margin-top: 20%;
-        margin-left: 20%;
-        width: 100%;
-    }
-    
-    .kartoffel {
-        margin-top: 10%;
-        margin-left: 40%;
-        width: 90%;
-    }
-    
-    .karotte {
-        margin-top: 5%;
-        margin-left: -10%;
 
-        width: 90%;
     }
-    
-    .oel {
-        margin-top: 0%;
-        margin-left: -50%;
+  
+    .scrollFadeIn4 {
+        transform: translate(0%);
+        animation: fadeInAndUp 4s;
 
-        width: 90%;
+
     }
+  
+  
+
+@keyframes fadeInAndUp {
+from {
+    opacity: 0;
+ 
+
+    
+}
+to{
+    opacity: 1;
+  
+}
+}
     
 
     /*Kaufangebot*/
@@ -2035,11 +2018,6 @@ to{
         margin-top: 30%;
         position: relative;
         text-align: center;
-        background: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0),
-            rgba(0,0,0, 100)
-          ),url(Bilder/chichaua.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         box-shadow: inset 0px 8px 6px -0.5px rgb(255, 255, 255);

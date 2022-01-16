@@ -1,6 +1,11 @@
 
 
 namespace RWD {
+
+  
+
+
+  
   let grafikklein: HTMLElement = document.getElementById("kreis-grafik-klein");
 
   let grafikgross: HTMLElement = document.getElementById("kreis-grafik-groß");
@@ -41,8 +46,6 @@ namespace RWD {
 
   let scrollDistance = distFromTop + horizonzalLength - windowWidth;
 
-  console.log(scrollDistance);
-
   let horizontalSection = document.getElementsByClassName("horizontal-section") as HTMLCollectionOf<HTMLElement>;
   let elementWrapper = document.getElementsByClassName("element-wrapper") as HTMLCollectionOf<HTMLElement>;
 
@@ -68,6 +71,72 @@ namespace RWD {
     let posIkra6: number = -window.scrollY / 1.75;
     dogfood6[0].style.top =  `${posIkra6}px`;
   };
+
+  
+
+  let imgScroll = document.getElementById("FadeLachs");
+  let imgScroll2 = document.getElementById("FadeKartoffel");
+  let imgScroll3 = document.getElementById("FadeKarotte");
+  let imgScroll4 = document.getElementById("FadeOel");
+
+
+
+  let fadeInView = new IntersectionObserver((entries) => {
+    if (entries[0].intersectionRatio <= 0 === false ) { // Wenn in viewport
+      imgScroll.classList.add("scrollFadeIn");
+      imgScroll2.classList.add("scrollFadeIn2");
+      imgScroll3.classList.add("scrollFadeIn3");
+      imgScroll4.classList.add("scrollFadeIn4");
+
+    } 
+  });
+
+  fadeInView.observe(imgScroll);
+  fadeInView.observe(imgScroll3);
+  fadeInView.observe(imgScroll4);
+  fadeInView.observe(imgScroll4);
+  
+  
+  let buyImg = document.getElementById("buyImg");
+  let stoerer = document.getElementById("stoerer");
+  let angebotFade = document.getElementById("angebotFade");
+  let gesundheitImg = document.getElementById("gesunfheit-img");
+  let siegelFade = document.getElementById("siegelFade");
+
+
+  let fadeIn = new IntersectionObserver((entries) => {
+    if (entries[0].intersectionRatio <= 0 === false ) { // Wenn in viewport
+      buyImg.classList.add("fadeInLeft");
+      angebotFade.classList.add("fadeInRight");
+      stoerer.classList.add("stoererFade");
+  
+    } 
+  });
+
+  let fadeGesundheit = new IntersectionObserver((entries) => {
+    if (entries[0].intersectionRatio <= 0 === false ) { // Wenn in viewport
+      gesundheitImg.classList.add("fadeInRight");
+
+    } 
+  });
+ 
+  let fadeInSiegel = new IntersectionObserver((entries) => {
+    if (entries[0].intersectionRatio <= 0 === false ) { // Wenn in viewport
+      siegelFade.classList.add("fadeUpSiegel");
+
+    } 
+  });
+  fadeIn.observe(buyImg);
+  fadeIn.observe(stoerer);
+  fadeIn.observe(angebotFade);
+  fadeGesundheit.observe(gesundheitImg);
+  fadeInSiegel.observe(siegelFade);
+
+
+
+
+
+
   
 
 
@@ -124,7 +193,7 @@ namespace RWD {
   let text2 = document.getElementById("text2");
   let text3 = document.getElementById("text3");
   let counter = 1;
-  console.log(counter);
+
 
   
 
