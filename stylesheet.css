@@ -852,7 +852,7 @@ to{
         to bottom,
         rgba(0, 0, 0, 0),
         rgba(0,0,0, 100)
-      ),url(Bilder/Waves.mp4);
+      ),url(https://github.com/MeikeMadel/RWD/raw/main/Bilder/Waves.mp4);
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: inset 0px 8px 6px -0.5px rgb(255, 255, 255);
